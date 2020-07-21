@@ -36,7 +36,9 @@
     <div class="numbertext">3 / 3</div>
     <div class="buttonOnImage">
 	    <img src="https://images.unsplash.com/photo-1518002171953-a080ee817e1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" style="width:100%">
-	    <button id="startButton">Start</button>
+	    <form action="/redirect" method="GET">
+	    	<button id="startButton">Start</button>
+	    </form>
 	</div>
     <div class="text">Some text here? Press Start to begin.</div>
   </div>

@@ -16,8 +16,11 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<start-class>com.bt.collab.alu.api.webapp.Application</start-class>
 	</properties>
-
+	
+	
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
