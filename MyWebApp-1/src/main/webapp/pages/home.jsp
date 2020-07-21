@@ -29,7 +29,7 @@
   <div class="mySlides fade">
     <div class="numbertext">2 / 3</div>
     <img src="https://img.wallpapersafari.com/desktop/1920/1080/78/64/pnfsea.jpg" style="width:100%">
-    <div class="text">Some text (to be added later)</div>
+    <div class="text">Some text? (to be added later)</div>
   </div>
 
   <div class="mySlides fade">
@@ -38,7 +38,7 @@
 	    <img src="https://images.unsplash.com/photo-1518002171953-a080ee817e1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" style="width:100%">
 	    <button id="startButton">Start</button>
 	</div>
-    <div class="text">Some text here? Press Start to begin</div>
+    <div class="text">Some text here? Press Start to begin.</div>
   </div>
 
   <!-- Next and previous buttons -->
