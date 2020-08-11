@@ -18,7 +18,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-Redirected Page
+Redirected Page..
 
 <%
 SneakerDAO dao = new SneakerDAO();

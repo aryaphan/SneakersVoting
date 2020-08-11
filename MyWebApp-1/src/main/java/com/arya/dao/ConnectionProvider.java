@@ -27,7 +27,7 @@ public class ConnectionProvider {
 				String driver = "com.mysql.cj.jdbc.Driver";
 				String databaseURL = "jdbc:mysql://localhost:3306/images";
 				String user = "root";
-				String password = "??";
+				String password = "//";
 				
 				Class.forName(driver);
 				con = DriverManager.getConnection(databaseURL, user, password);	
@@ -44,7 +44,7 @@ public class ConnectionProvider {
 
 //	String databaseURL = "jdbc:mysql://localhost:3306/images";
 //	String user = "root";
-//	String password = "??";
+//	String password = "//";
 //	Integer image_id = ThreadLocalRandom.current().nextInt(1,15);
 //	
 //	public Sneaker get(int id) throws SQLException, IOException{
