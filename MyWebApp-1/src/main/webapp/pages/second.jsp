@@ -11,25 +11,6 @@
 <%@page import="com.arya.dao.SneakerDAO" %>
 <%@page import="java.util.*" %>
 
-<%
-// 	String id = request.getParameter("userid");
-// 	String driver = "com.mysql.cj.jdbc.Driver";
-// 	String connectionUrl = "jdbc:mysql://localhost:3306/";
-// 	String database = "images";
-// 	String userid = "root";
-// 	String password = "Arya,0301";
-// 	Integer image_id = ThreadLocalRandom.current().nextInt(1,15);
-	
-// 	try {
-// 	Class.forName(driver);
-// 	} catch (ClassNotFoundException e) {
-// 	e.printStackTrace();
-// 	}
-	
-// 	Connection connection = null;
-// 	Statement statement = null;
-// 	ResultSet resultSet = null;
-%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,6 +19,7 @@
 </head>
 <body>
 Redirected Page
+
 <%
 SneakerDAO dao = new SneakerDAO();
 List<Sneaker> sneakerList = dao.getAllSneakers();
@@ -58,17 +40,6 @@ Sneaker sneaker2 = sneakerList.get(num2);
 	
 %>
 
-
-<%
-// 	try {
-// 		connection = DriverManager.getConnection(connectionUrl+database, userid, password);
-// 		statement=connection.createStatement();
-// 		String sql ="select * from sneakers where image_id=" + image_id;
-// 		resultSet = statement.executeQuery(sql);
-// 		System.out.println(image_id);
-		
-// 		while(resultSet.next()) {
-%>
 <div align="center">
 <table>
 	<tr>
@@ -81,24 +52,14 @@ Sneaker sneaker2 = sneakerList.get(num2);
 		<td><%=sneaker2.getName() %></td>
 	</tr>
 </table>
-<%-- <h2><%=sneaker.getId() %> </h2> --%>
-<%-- <h2><%=sneaker.getName() %></h2> --%>
 
 <%-- 	<h2><%=resultSet.getString("name") %></h2>  --%>
 <%-- 	<h2><c:out value="${sneaker.name}" /></h2> --%>
 <%-- 		<h2 th:text="${sneaker}"></h2> --%>
 <%-- 	<img src="data:image/jpg;base64,${sneaker.base64Image}" width="1000", height="900"/> --%>
 </div>
-<%
-//}
-%>
 
-<%
-// 	}
-// 	connection.close();
-// 	} catch (Exception e) {
-// 		e.printStackTrace();
-// 	}
-%>
+
+
 </body>
 </html>

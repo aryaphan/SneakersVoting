@@ -33,6 +33,9 @@ public class GetSneakerServlet extends HttpServlet {
 		
 		RequestDispatcher rd = request.getRequestDispatcher(redirect);
 		rd.forward(request, response);
+		
+		
+		
 //		int imageId = ThreadLocalRandom.current().nextInt(1,15);
 //		SneakerDAO dao = new SneakerDAO();
 //		
