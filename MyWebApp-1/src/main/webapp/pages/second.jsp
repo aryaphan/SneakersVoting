@@ -10,6 +10,8 @@
 <%@page import="com.arya.model.Sneaker" %>
 <%@page import="com.arya.dao.SneakerDAO" %>
 <%@page import="java.util.*" %>
+<%@page import="java.io.*" %>
+<%@page isELIgnored="false" %>
 
 <!DOCTYPE html>
 <html>
@@ -20,37 +22,30 @@
 <body>
 Redirected Page..
 
-<%
-SneakerDAO dao = new SneakerDAO();
-List<Sneaker> sneakerList = dao.getAllSneakers();
-Integer num1 = ThreadLocalRandom.current().nextInt(0, sneakerList.size());
-Integer num2 = ThreadLocalRandom.current().nextInt(0, sneakerList.size());
-
-while (num1 == num2){
-	num2 = ThreadLocalRandom.current().nextInt(0, sneakerList.size());
-}
-
-Sneaker sneaker1 = sneakerList.get(num1);
-Sneaker sneaker2 = sneakerList.get(num2);
-
-%>
-
-<%
-//for (Sneaker sneaker : sneakerList){
-	
-%>
 
 <div align="center">
 <table>
 	<tr>
-		<td><%=sneaker1.getId() %></td>
-		<td><%=sneaker2.getId() %></td>
+<%-- 		<td width="400"><%=sneaker1.getId() %></td> --%>
+<%-- 		<td><%=sneaker2.getId() %></td> --%>
+		<th>Id</th>
+		<th>Name</th>
+		<th>Score</th>
+		<th>Photo</th>
 	</tr>
 	
+	<c:forEach var="sneaker" items="${sneakerList}">
 	<tr>
-		<td><%=sneaker1.getName() %></td>
-		<td><%=sneaker2.getName() %></td>
+<%-- 		<td><%=sneaker1.getName() %></td> --%>
+<%-- 		<td><%=sneaker2.getName() %></td> --%>
+		
+		<td>${sneaker.id}</td>
+		<td>${sneaker.name}</td>
+		<td>${sneaker.score}</td>
+		<td><img width="500" height="600" src="getSneakerImage/<c:out value='${sneaker.id}'/>"></td>
 	</tr>
+	</c:forEach>
+	
 </table>
 
 <%-- 	<h2><%=resultSet.getString("name") %></h2>  --%>
