@@ -1,5 +1,9 @@
 package com.arya.config;
 
+import javax.servlet.http.HttpServlet;
+
+import org.springframework.boot.web.servlet.ServletComponentScan;
+import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -7,17 +11,21 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.resource.PathResourceResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
 import com.arya.dao.SneakerDAO;
+import com.arya.servlet.ContinueVoting;
 import com.arya.dao.GetSneakers;
 
 @Configuration
 @EnableWebMvc
 @ComponentScan
+@ServletComponentScan(basePackages="com.arya.servlet")
 public class Config implements WebMvcConfigurer {
 
     @Override
@@ -27,6 +35,20 @@ public class Config implements WebMvcConfigurer {
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/").setViewName("forward:/index.html");
+    }
+//    @Override
+//    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+//        registry.addResourceHandler("/resources/**")
+//          .addResourceLocations("/resources/").setCachePeriod(3600)
+//          .resourceChain(true).addResolver(new PathResourceResolver());
+//    }
+    @Bean	
+    public ServletRegistrationBean<HttpServlet> votingServlet() {
+ 	   ServletRegistrationBean<HttpServlet> servRegBean = new ServletRegistrationBean<>();
+ 	   servRegBean.setServlet(new ContinueVoting());
+ 	   servRegBean.addUrlMappings("/ContinueVoting");
+ 	   servRegBean.setLoadOnStartup(1);
+ 	   return servRegBean;
     }
 
     @Bean
@@ -44,7 +66,7 @@ public class Config implements WebMvcConfigurer {
     	ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
     	ds.setUrl("jdbc:mysql://localhost:3306/images");
     	ds.setUsername("root");
-    	ds.setPassword("//");
+    	ds.setPassword("Arya,0301");
     	
     	return ds;
     	
