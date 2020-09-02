@@ -23,12 +23,12 @@
 </head>
 <body>
 <div class = "jumbotron text-center">
-		<h2><i>Best Kicks</i></h2>
+		<h2><i></i></h2>
 	</div>
 	
 	<div>
-		<p>Don't be shy. You're the judge :)</p>
-		<p>Click to vote which one is more fire!</p>
+		<p>You're the judge</p>
+		<p></p>
 	</div>
 
 <%
@@ -40,19 +40,20 @@
 // 	}
 %>
 
-
-
-
 <c:set var="size" value="${fn:length(sneakerList)}"/>
 <c:set var="id1" value="${ThreadLocalRandom.current().nextInt(0, size)}"/>
 <c:set var="id2" value="${ThreadLocalRandom.current().nextInt(0, size)}"/>
 
 <c:forEach begin="1" end="100" var="count">
-	<c:if test = "${num2} != ${num1}">
-		<c:set var="num2" value="${num2}"/>
-	</c:if>
-	<c:set var="num2" value="${ThreadLocalRandom.current().nextInt(0, size)}"/>
-	
+	<c:choose>
+		<c:when test = "${num2} != ${num1}">
+			<c:set var="num2" value="${num2}"/>
+		</c:when>
+		
+		<c:otherwise>
+			<c:set var="num2" value="${ThreadLocalRandom.current().nextInt(0, size)}"/>
+		</c:otherwise>
+	</c:choose>
 </c:forEach>
 
 <c:out value = "${id1}"/>
@@ -60,6 +61,7 @@
 
 <c:set var="sneaker1" value="${sneakerList.get(id1)}"/>
 <c:set var="sneaker2" value="${sneakerList.get(id2)}"/>
+
 
 
 <div align="center">
@@ -77,8 +79,7 @@
 			<td>
 				<div class="photo">
 					<input type="image" name="img1" src="getSneakerImage/<c:out value='${sneaker1.id}'/>" width="300" height="400">
-<%-- 						<img width="300" height="400" src="getSneakerImage/<c:out value='${sneaker1.id}'/>"> --%>
-					
+
 				</div>
 			</td>
 			<td>

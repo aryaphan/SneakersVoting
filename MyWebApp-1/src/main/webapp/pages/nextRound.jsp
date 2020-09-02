@@ -23,12 +23,12 @@
 </head>
 <body>
 <div class = "jumbotron text-center">
-		<h2><i>Best Kicks</i></h2>
+		<h2><i></i></h2>
 	</div>
 	
 	<div>
-		<p>Don't be shy. You're the judge :)</p>
-		<p>Click to vote which one is more fire!</p>
+		<p>You're the judge</p>
+		<p></p>
 	</div>
 
 <%
@@ -55,15 +55,18 @@
 	
 <%-- </c:forEach> --%>
 
-<%-- <c:out value = "${id1}"/> --%>
-<%-- <c:out value = "${id2}"/> --%>
+<c:set var="id1" value="${id1}"/>
+<c:set var="id2" value="${id2}"/>
+
+<c:out value = "${id1}"/>
+<c:out value = "${id2}"/>
 
 <c:set var="sneaker1" value="${sneakerList.get(id1)}"/>
 <c:set var="sneaker2" value="${sneakerList.get(id2)}"/>
 
-
+The page has been called ${counter} times.
 <div align="center">
-<form action="ContinueVoting" method="GET">
+<form action="/ContinueVoting" method="GET">
 	<table>
 		<tr>
 			
@@ -87,6 +90,13 @@
 <%-- 					<img width="300" height="400" src="getSneakerImage/<c:out value='${sneaker2.id}'/>"> --%>
 				</div>
 			</td>
+			<div>
+				<input type="hidden" name="id1" value="${sneaker1.id}">
+			</div>
+			
+			<div>
+				<input type="hidden" name="id2" value="${sneaker2.id}">
+			</div>
 		</tr>
 	
 		
