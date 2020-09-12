@@ -66,7 +66,7 @@ public class Config implements WebMvcConfigurer {
     	ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
     	ds.setUrl("jdbc:mysql://localhost:3306/images");
     	ds.setUsername("root");
-    	ds.setPassword("??");
+    	ds.setPassword("Arya,0301");
     	
     	return ds;
     	
