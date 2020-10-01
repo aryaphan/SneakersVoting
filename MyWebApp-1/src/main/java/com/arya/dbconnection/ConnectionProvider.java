@@ -27,7 +27,7 @@ public class ConnectionProvider {
 				String driver = "com.mysql.cj.jdbc.Driver";
 				String databaseURL = "jdbc:mysql://localhost:3306/images";
 				String user = "root";
-				String password = "Arya,0301";
+				String password = "//";
 				
 				Class.forName(driver);
 				con = DriverManager.getConnection(databaseURL, user, password);	
