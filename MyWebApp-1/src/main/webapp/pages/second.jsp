@@ -4,6 +4,7 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <%@page import="java.util.concurrent.ThreadLocalRandom" %>
+<%@page import="com.arya.model.Sneaker" %>
 
 <%@page import="java.util.*" %>
 <%@page import="java.io.*" %>
@@ -32,29 +33,36 @@
 	</div>
 
 <%
-// 	int id1 = ThreadLocalRandom.current().nextInt(0,14);
-// 	int id2 = ThreadLocalRandom.current().nextInt(0,14);
+	List<Sneaker> sneakerList = (List<Sneaker>)request.getAttribute("sneakerList");
+	int size = sneakerList.size();
+	int id1 = ThreadLocalRandom.current().nextInt(0,size);
+	int id2 = ThreadLocalRandom.current().nextInt(0,size);
 	
-// 	while (id2 == id1) {
-// 		id2 = ThreadLocalRandom.current().nextInt(0,14);
-// 	}
+	while (id2 == id1) {
+		id2 = ThreadLocalRandom.current().nextInt(0,size);
+	}
+	pageContext.setAttribute("id1", id1);
+	pageContext.setAttribute("id2", id2);
 %>
 
-<c:set var="size" value="${fn:length(sneakerList)}"/>
-<c:set var="id1" value="${ThreadLocalRandom.current().nextInt(0, size)}"/>
-<c:set var="id2" value="${ThreadLocalRandom.current().nextInt(0, size)}"/>
+<c:set var="id1" value="${id1}"/>
+<c:set var="id2" value = "${id2}"/>
 
-<c:forEach begin="1" end="100" var="count">
-	<c:choose>
-		<c:when test = "${id2} != ${id1}">
-			<c:set var="id2" value="${id2}"/>
-		</c:when>
+<%-- <c:set var="size" value="${fn:length(sneakerList)}"/> --%>
+<%-- <c:set var="id1" value="${ThreadLocalRandom.current().nextInt(0, size)}"/> --%>
+<%-- <c:set var="id2" value="${ThreadLocalRandom.current().nextInt(0, size)}"/> --%>
+
+<%-- <c:forEach begin="1" end="100" var="count"> --%>
+<%-- 	<c:choose> --%>
+<%-- 		<c:when test = "${id2} != ${id1}"> --%>
+<%-- 			<c:set var="id2" value="${id2}"/> --%>
+<%-- 		</c:when> --%>
 		
-		<c:otherwise>
-			<c:set var="id2" value="${ThreadLocalRandom.current().nextInt(0, size)}"/>
-		</c:otherwise>
-	</c:choose>
-</c:forEach>
+<%-- 		<c:otherwise> --%>
+<%-- 			<c:set var="id2" value="${ThreadLocalRandom.current().nextInt(0, size)}"/> --%>
+<%-- 		</c:otherwise> --%>
+<%-- 	</c:choose> --%>
+<%-- </c:forEach> --%>
 
 <c:out value = "${id1}"/>
 <c:out value = "${id2}"/>
