@@ -46,12 +46,12 @@
 
 <c:forEach begin="1" end="100" var="count">
 	<c:choose>
-		<c:when test = "${num2} != ${num1}">
-			<c:set var="num2" value="${num2}"/>
+		<c:when test = "${id2} != ${id1}">
+			<c:set var="id2" value="${id2}"/>
 		</c:when>
 		
 		<c:otherwise>
-			<c:set var="num2" value="${ThreadLocalRandom.current().nextInt(0, size)}"/>
+			<c:set var="id2" value="${ThreadLocalRandom.current().nextInt(0, size)}"/>
 		</c:otherwise>
 	</c:choose>
 </c:forEach>
