@@ -43,7 +43,7 @@ public class HomeController {
 		return "redirect:secondPage";
 	}
 	
-	@RequestMapping(value="/secondPage", method = RequestMethod.GET)
+	@RequestMapping(value="/vote", method = RequestMethod.GET)
 //	public String secondPage() {
 //		return "second" ;
 //	}
@@ -51,7 +51,7 @@ public class HomeController {
 		System.out.println("calling second page");
 		List<Sneaker> sneakerList = dao.getAllSneakers();
 		model.addObject("sneakerList", sneakerList);
-		model.setViewName("second");
+		model.setViewName("vote");
 		return model;
 	}
 	
