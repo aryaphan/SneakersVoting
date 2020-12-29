@@ -21,16 +21,23 @@
 	<link rel="stylesheet" type="text/css" href="css/vote.css">
 	<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap" rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class = "jumbotron text-center">
-		<h2><i></i></h2>
-	</div>
-	
-	<div>
+<div class ="topnav">
+		<nav>
+		<ul>
+			<li><a class="active" href="https://www.nike.com/ca/">Vote</a></li>
+			<li><a href="https://www.adidas.ca/en?cm_mmc=AdiSEM&gclid=Cj0KCQiA_qD_BRDiARIsANjZ2LBYgHzgmk9T5GFeI5mP7b7vRMwcyjG1h6LV-gt61tNQox-ElMRs4B4aAmikEALw_wcB"> Ranking </a></li>
+			<li><a href="https://www.footlocker.ca/?SID=5564&inceptor=1&cm_mmc=paid%20search-_-google-_-g-_-branded-_--_--_-p-_--_--_-199260539-_--_-13242920699-_-textads-_-p31077138328-_-389030572260-_--_--_-&gclid=Cj0KCQiA_qD_BRDiARIsANjZ2LCYshnRDWGk2fy9RTvreRl95Bxzgo7DPr5sWp_2Y2IyA0w3aC2OOIYaAvhzEALw_wcB&gclsrc=aw.ds">On Feet</a></li>
+		</ul>
+	</nav>
+</div>
+<div>
 		<p>You're the judge</p>
 		<p></p>
-	</div>
+</div>
 
 <%
 	List<Sneaker> sneakerList = (List<Sneaker>)request.getAttribute("sneakerList");
