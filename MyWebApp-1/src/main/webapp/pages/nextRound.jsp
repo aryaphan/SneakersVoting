@@ -22,38 +22,30 @@
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class = "jumbotron text-center">
-		<h2><i></i></h2>
-	</div>
-	
-	<div>
-		<p>You're the judge</p>
+<div class ="topnav">
+		<nav>
+		<ul>
+			<li>
+				<form action="/vote" method="GET">
+					<a class="active" href="vote">Vote</a>
+				</form>
+			</li>
+			<li>
+				<form action="/showRanks" method="GET">
+					<a href="showRanks"> Ranking </a>
+				</form>
+			</li>
+			<li><a href="https://www.footlocker.ca/?SID=5564&inceptor=1&cm_mmc=paid%20search-_-google-_-g-_-branded-_--_--_-p-_--_--_-199260539-_--_-13242920699-_-textads-_-p31077138328-_-389030572260-_--_--_-&gclid=Cj0KCQiA_qD_BRDiARIsANjZ2LCYshnRDWGk2fy9RTvreRl95Bxzgo7DPr5sWp_2Y2IyA0w3aC2OOIYaAvhzEALw_wcB&gclsrc=aw.ds">About</a></li>
+		</ul>
+	</nav>
+</div>
+<div>
+		<p>PICK ONE</p>
 		<p></p>
-	</div>
-
-<%
-// 	int id1 = ThreadLocalRandom.current().nextInt(0,14);
-// 	int id2 = ThreadLocalRandom.current().nextInt(0,14);
-	
-// 	while (id2 == id1) {
-// 		id2 = ThreadLocalRandom.current().nextInt(0,14);
-// 	}
-%>
+</div>
 
 
 
-
-<%-- <c:set var="size" value="${fn:length(sneakerList)}"/> --%>
-<%-- <c:set var="id1" value="${ThreadLocalRandom.current().nextInt(0, size)}"/> --%>
-<%-- <c:set var="id2" value="${ThreadLocalRandom.current().nextInt(0, size)}"/> --%>
-
-<%-- <c:forEach begin="1" end="100" var="count"> --%>
-<%-- 	<c:if test = "${num2} != ${num1}"> --%>
-<%-- 		<c:set var="num2" value="${num2}"/> --%>
-<%-- 	</c:if> --%>
-<%-- 	<c:set var="num2" value="${ThreadLocalRandom.current().nextInt(0, size)}"/> --%>
-	
-<%-- </c:forEach> --%>
 
 <c:set var="id1" value="${id1}"/>
 <c:set var="id2" value="${id2}"/>
@@ -80,14 +72,12 @@ The page has been called ${counter} times.
 			<td>
 				<div class="photo">
 					<input type="image" name="img1" src="getSneakerImage/<c:out value='${sneaker1.id}'/>" width="300" height="400">
-<%-- 						<img width="300" height="400" src="getSneakerImage/<c:out value='${sneaker1.id}'/>"> --%>
 					
 				</div>
 			</td>
 			<td>
 				<div class="photo">
 					<input type="image" name="img2" src="getSneakerImage/<c:out value='${sneaker2.id}'/>" width="300" height="400">
-<%-- 					<img width="300" height="400" src="getSneakerImage/<c:out value='${sneaker2.id}'/>"> --%>
 				</div>
 			</td>
 			<div>
