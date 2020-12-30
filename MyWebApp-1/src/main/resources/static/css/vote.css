@@ -30,6 +30,7 @@ p {
 
 th {
 	color: black;
+	text-align: center;
 }
 
 .photo{
@@ -38,7 +39,7 @@ th {
 }
 
 img{
-	display: block;
+	/* display: block; */
 }
 
 .photo:hover {
@@ -95,4 +96,9 @@ img{
 	/*background-color: #4CAF50;*/
 /*	color: white;*/
 	text-decoration: underline;
+}
+
+td {
+	width: 400px;
+	text-align: center;
 }

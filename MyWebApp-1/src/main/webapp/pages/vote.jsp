@@ -79,14 +79,14 @@
 		<tr>
 			
 			<td>
-				<div class="photo">
-					<input type="image" name="img1" src="getSneakerImage/<c:out value='${sneaker1.id}'/>" width="300" height="400">
+				<div>
+					<input class="photo" type="image" name="img1" src="getSneakerImage/<c:out value='${sneaker1.id}'/>" width="300" height="400">
 
 				</div>
 			</td>
 			<td>
-				<div class="photo">
-					<input type="image" name="img2" src="getSneakerImage/<c:out value='${sneaker2.id}'/>" width="300" height="400">
+				<div>
+					<input class="photo" type="image" name="img2" src="getSneakerImage/<c:out value='${sneaker2.id}'/>" width="300" height="400">
 <%-- 					<img width="300" height="400" src="getSneakerImage/<c:out value='${sneaker2.id}'/>"> --%>
 				</div>
 			</td>
