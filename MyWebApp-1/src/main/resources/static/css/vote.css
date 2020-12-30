@@ -21,8 +21,10 @@ body {
 p {
 	text-align: center;
 	margin-bottom: 0.3rem;
-	font-family: 'Libre Franklin', sans-serif;
-	font-size: 50px;
+	/* font-family: 'Libre Franklin', sans-serif; */
+	/* font-family: 'Quicksand', sans-serif; */
+	font-family: 'Roboto', sans-serif;
+	font-size: 30px;
 	color: black;
 }
 
@@ -63,7 +65,9 @@ img{
 	display: inline;
 	color: white;
 	/*font-family: 'Comfortaa', cursive;*/
-	font-family: 'Space Grotesk', sans-serif;
+	/* font-family: 'Space Grotesk', sans-serif; */
+	/* font-family: 'Quicksand', sans-serif; */
+	font-family: 'Roboto', sans-serif;
 
 
 }
@@ -76,7 +80,7 @@ img{
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
-	font-size: 25px;
+	font-size: 20px;
 
 }
 
