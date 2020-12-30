@@ -6,6 +6,9 @@
 <%@page import="java.io.*" %>
 <%@page isELIgnored="false" %>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@page import="com.arya.model.Sneaker" %>
+<%@page import="com.arya.rating.RatingHandler" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,8 +20,8 @@
 <h1>Ranks</h1>
 
 <%
-// 	int rank = 1;
-// 	String ranking = "Rank" + rank;
+	List<Sneaker> sneakerRanks = RatingHandler.getRanking();
+	pageContext.setAttribute("sneakerRanks", sneakerRanks);
 %>
 <div align="center">
 	<table>
