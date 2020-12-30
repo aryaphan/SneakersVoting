@@ -63,7 +63,7 @@ img{
 }
 
 .topnav nav ul li  {
-	display: inline;
+	display: inline-block;
 	color: white;
 	/*font-family: 'Comfortaa', cursive;*/
 	/* font-family: 'Space Grotesk', sans-serif; */
