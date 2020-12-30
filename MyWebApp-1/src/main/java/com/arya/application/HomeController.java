@@ -38,6 +38,13 @@ public class HomeController {
 		return "home";
 	}
 	
+	@RequestMapping(value="/showRanks", method = RequestMethod.GET)
+	public String rankingPage() {
+		System.out.println("calling home page");
+		return "showRanks";
+	}
+	
+	
 	@RequestMapping(value="/redirect", method = RequestMethod.GET)
 	public String redirect() {
 		return "redirect:secondPage";
