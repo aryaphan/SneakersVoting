@@ -95,7 +95,6 @@
 			<td>
 				<div>
 					<input class="photo" type="image" name="img2" src="getSneakerImage/<c:out value='${sneaker2.id}'/>" width="300" height="400">
-<%-- 					<img width="300" height="400" src="getSneakerImage/<c:out value='${sneaker2.id}'/>"> --%>
 				</div>
 			</td>
 			<div>

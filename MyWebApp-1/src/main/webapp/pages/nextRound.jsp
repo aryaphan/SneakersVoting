@@ -20,6 +20,10 @@
 	<link rel="stylesheet" type="text/css" href="css/vote.css">
 	<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap" rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap" rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@200&display=swap" rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class ="topnav">
@@ -70,14 +74,14 @@ The page has been called ${counter} times.
 		<tr>
 			
 			<td>
-				<div class="photo">
-					<input type="image" name="img1" src="getSneakerImage/<c:out value='${sneaker1.id}'/>" width="300" height="400">
+				<div>
+					<input class="photo" type="image" name="img1" src="getSneakerImage/<c:out value='${sneaker1.id}'/>" width="300" height="400">
 					
 				</div>
 			</td>
 			<td>
-				<div class="photo">
-					<input type="image" name="img2" src="getSneakerImage/<c:out value='${sneaker2.id}'/>" width="300" height="400">
+				<div>
+					<input class="photo" type="image" name="img2" src="getSneakerImage/<c:out value='${sneaker2.id}'/>" width="300" height="400">
 				</div>
 			</td>
 			<div>
