@@ -72,8 +72,10 @@ public class ContinueVoting extends HttpServlet {
 			getServletConfig().getServletContext().getRequestDispatcher("/pages/nextRound.jsp").forward(request, response);
 		}
 		else {
-			ArrayList<Sneaker> sneakerRanks = RatingHandler.getRanking();
-			request.setAttribute("sneakerRanks", sneakerRanks);
+			/*
+			 * ArrayList<Sneaker> sneakerRanks = RatingHandler.getRanking();
+			 * request.setAttribute("sneakerRanks", sneakerRanks);
+			 */
 			getServletConfig().getServletContext().getRequestDispatcher("/pages/showRanks.jsp").forward(request, response);
 		}
 		
