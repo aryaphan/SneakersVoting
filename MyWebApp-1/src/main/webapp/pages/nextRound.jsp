@@ -63,39 +63,49 @@
 The page has been called ${counter} times.
 <div align="center">
 <form action="/ContinueVoting" method="GET">
-	<table>
-		<tr>
-			
-			<th>${sneaker1.name}</th>
-			<th>${sneaker2.name}</th>
-		</tr>
-		
-		
-		<tr>
-			
-			<td>
-				<div>
-					<input class="photo" type="image" name="img1" src="getSneakerImage/<c:out value='${sneaker1.id}'/>" width="300" height="400">
-					
-				</div>
-			</td>
-			<td>
-				<div>
-					<input class="photo" type="image" name="img2" src="getSneakerImage/<c:out value='${sneaker2.id}'/>" width="300" height="400">
-				</div>
-			</td>
-			<div>
+	<main class="container"> 
+	
+	 <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+    <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+      <div class="my-3 py-3">
+        <%-- <h2 class="display-5">${sneaker1.name}</h2> --%>
+        <p class="lead dark">${sneaker1.name}</p>
+        <input align="center" class="photo" type="image" name="img1" src="getSneakerImage/<c:out value='${sneaker1.id}'/>" width="100%" height="100%">
+       
+      </div>
+    
+
+    </div>
+  <!--   <div id="vs">
+     	<p>
+      	<h1>V</h1>
+      	<h1>S</h1>
+      	</p>
+     </div> -->
+    
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 p-3">
+       <p class="lead">${sneaker2.name}</p>
+         <input class="photo" type="image" name="img2" src="getSneakerImage/<c:out value='${sneaker2.id}'/>" width="100%" height="100%">
+      </div>
+    </div>
+  </div>
+ <div>
 				<input type="hidden" name="id1" value="${sneaker1.id}">
 			</div>
 			
 			<div>
 				<input type="hidden" name="id2" value="${sneaker2.id}">
-			</div>
-		</tr>
+			</div> 
+ 
 	
-		
-		
-	</table>
+	
+	
+
+</main>
+	
+
+	
 </form>
 
 
