@@ -102,3 +102,16 @@ td {
 	width: 400px;
 	text-align: center;
 }
+
+.dark {
+	color: white;
+}
+
+.flex-equal > * {
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    flex: 1;
+  }
+}
