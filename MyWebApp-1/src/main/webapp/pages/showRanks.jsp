@@ -66,7 +66,7 @@
 			        <h2 class="display-5">Rank <c:out value="${rank}"/></h2>
 			        <p class="lead">${sneaker1.name}</p>
 			      </div>
-			      <img src="getSneakerImage/<c:out value='${sneaker1.id}'/>" class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px;">
+			      <img src="getSneakerImage/<c:out value='${sneaker1.id}'/>" class="bg-light shadow-sm mx-auto" style="width: 80%; height: 350px;">
 			    <c:set var="rank" value="${rank + 1}"/>
 			    </div>
 			    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden rounded">
@@ -74,7 +74,7 @@
 			        <h2 class="display-5">Rank <c:out value="${rank}"/></h2>
 			      	 <p class="lead">${sneaker2.name}</p>
 			      </div>
-			    <img src="getSneakerImage/<c:out value='${sneaker2.id}'/>" class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px;">
+			    <img src="getSneakerImage/<c:out value='${sneaker2.id}'/>" class="bg-light shadow-sm mx-auto" style="width: 80%; height: 350px;">
 			     
 			    </div>
 			     <c:set var="rank" value="${rank + 1}"/>
