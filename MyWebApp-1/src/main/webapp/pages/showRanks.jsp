@@ -8,42 +8,119 @@
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@page import="com.arya.model.Sneaker" %>
 <%@page import="com.arya.rating.RatingHandler" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/vote.css">
 <title>Ranks</title>
 </head>
 <body>
-<h1>Ranks</h1>
+<jsp:useBean id="date" class="java.util.Date" />
+
+<header class="site-header sticky-top py-1">
+  <nav class="container d-flex flex-column flex-md-row justify-content-between">
+   
+    <form action="/vote" method="GET">
+    	<a class="py-2 d-none d-md-inline-block" href="vote">Vote</a>
+    </form>
+    
+    <form action="/showRanks" method="GET">
+    	<a class="py-2 d-none d-md-inline-block" href="showRanks">Ranking</a>
+    </form>
+    
+   
+    <a class="py-2 d-none d-md-inline-block" href="#">About</a>
+    
+  </nav>
+</header>
+
 
 <%
 	List<Sneaker> sneakerRanks = RatingHandler.getRanking();
 	pageContext.setAttribute("sneakerRanks", sneakerRanks);
 %>
-<div align="center">
-	<table>
-		<tr>
-			<th>Rank</th>
-			<th>Name</th>
-			<th>Score</th>
-			<th>Photo</th>
-		</tr>
+
+<main>
+  <div class="position-relative text-center bg-light box">
+    <div class="col-md-5 p-lg-5 mx-auto my-5" >
+      <h2 class="display-4 fw-normal">TOP 10 SNEAKERS <fmt:formatDate value="${date}" pattern="yyyy" /></h2>
+    </div>
+ 
+  </div>
+  
+  <c:set var="rank" value="1"/>
+  <c:set var="startIndex" scope="page" value="0"/>
+  <c:set var="endIndex" scope="page" value="9"/>
+		<c:forEach begin="${startIndex}" end="${endIndex}" step="2" var="index">
+			<c:set var="sneaker1" value="${sneakerRanks.get(index)}"/>
+			<c:set var="sneaker2" value="${sneakerRanks.get(index+1)}"/>
+			
+			<div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 ">
+			    <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden rounded ">
+			      <div class="my-3 py-3">
+			        <h2 class="display-5">Rank <c:out value="${rank}"/></h2>
+			        <p class="lead">${sneaker1.name}</p>
+			      </div>
+			      <img src="getSneakerImage/<c:out value='${sneaker1.id}'/>" class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px;">
+			    <c:set var="rank" value="${rank + 1}"/>
+			    </div>
+			    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden rounded">
+			      <div class="my-3 p-3">
+			        <h2 class="display-5">Rank <c:out value="${rank}"/></h2>
+			      	 <p class="lead">${sneaker2.name}</p>
+			      </div>
+			    <img src="getSneakerImage/<c:out value='${sneaker2.id}'/>" class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px;">
+			     
+			    </div>
+			     <c:set var="rank" value="${rank + 1}"/>
+			  </div>
 		
-		<c:set var="rank" value="1"/>
-		<c:forEach items="${sneakerRanks}" var="sneaker">
-			<tr>
-				<td><c:out value="${rank}"/></td>
-				<td>${sneaker.name}</td>
-				<td>${sneaker.score}</td>
-				<td><img width="300" height="400" src="getSneakerImage/<c:out value='${sneaker.id}'/>"></td>
-			</tr>
-			<c:set var="rank" value="${rank + 1}"/>
+
 		</c:forEach>
-	</table>
-</div>
+
+  
+
+ 
+</main>
+
+<footer class="container py-5">
+  <div class="row">
+ 
+    <div class="col-4 col-md">
+      <h5>Features</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary" href="#">Spring Boot</a></li>
+        <li><a class="link-secondary" href="#">Java</a></li>
+      </ul>
+    </div>
+    <div class="col-4 col-md">
+      <h5>Resources</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary" href="#">Resource name</a></li>
+        <li><a class="link-secondary" href="#">Resource</a></li>
+        <li><a class="link-secondary" href="#">Another resource</a></li>
+        <li><a class="link-secondary" href="#">Final resource</a></li>
+      </ul>
+    </div>
+    <div class="col-4 col-md">
+      <h5>About</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary" href="#">Team</a></li>
+        <li><a class="link-secondary" href="#">Locations</a></li>
+        <li><a class="link-secondary" href="#">Privacy</a></li>
+        <li><a class="link-secondary" href="#">Terms</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+
 
 
 </body>
