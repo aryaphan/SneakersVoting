@@ -81,6 +81,10 @@ td {
     flex: 1;
   }
 }
+
+h6 {
+	font-size: 17px;	
+}
 /* 
 body {
     background:  linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(https://i.imgur.com/D1zUlfc.jpg);

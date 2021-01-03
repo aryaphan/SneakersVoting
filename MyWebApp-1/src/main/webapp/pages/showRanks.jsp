@@ -47,7 +47,7 @@
 
 <main>
   <div class="position-relative text-center bg-light box">
-    <div class="col-md-5 p-lg-5 mx-auto my-5" >
+    <div class="col-md-5 mx-auto" >
       <h2 class="display-4 fw-normal">TOP 10 SNEAKERS <fmt:formatDate value="${date}" pattern="yyyy" /></h2>
     </div>
  
@@ -56,30 +56,61 @@
   <c:set var="rank" value="1"/>
   <c:set var="startIndex" scope="page" value="0"/>
   <c:set var="endIndex" scope="page" value="9"/>
-		<c:forEach begin="${startIndex}" end="${endIndex}" step="2" var="index">
+		<c:forEach begin="${startIndex}" end="${endIndex}" step="5" var="index">
 			<c:set var="sneaker1" value="${sneakerRanks.get(index)}"/>
 			<c:set var="sneaker2" value="${sneakerRanks.get(index+1)}"/>
-			
-			<div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 ">
-			    <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden rounded ">
-			      <div class="my-3 py-3">
-			        <h2 class="display-5">Rank <c:out value="${rank}"/></h2>
-			        <p class="lead">${sneaker1.name}</p>
+			<c:set var="sneaker3" value="${sneakerRanks.get(index+2)}"/>
+			<c:set var="sneaker4" value="${sneakerRanks.get(index+3)}"/>
+			<c:set var="sneaker5" value="${sneakerRanks.get(index+4)}"/>
+			<div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 row">
+			    <div class="bg-dark me-md-3 px-3 px-md-5 text-center text-white overflow-hidden rounded col-sm-2 ">
+			      <div class="my-3">
+			        <h5>Rank <c:out value="${rank}"/></h5>
+			        <h6>${sneaker1.name}</h6>
 			      </div>
 			      <img src="getSneakerImage/<c:out value='${sneaker1.id}'/>" class="bg-light shadow-sm mx-auto" style="width: 80%; height: 350px;">
 			    <c:set var="rank" value="${rank + 1}"/>
 			    </div>
-			    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden rounded">
-			      <div class="my-3 p-3">
-			        <h2 class="display-5">Rank <c:out value="${rank}"/></h2>
-			      	 <p class="lead">${sneaker2.name}</p>
+			    
+			    
+			    <div class="bg-dark me-md-3 px-3 px-md-5 text-center text-white overflow-hidden rounded col-sm-2 ">
+			      <div class="my-3">
+			        <h5>Rank <c:out value="${rank}"/></h5>
+			        <h6>${sneaker2.name}</h6>
 			      </div>
 			    <img src="getSneakerImage/<c:out value='${sneaker2.id}'/>" class="bg-light shadow-sm mx-auto" style="width: 80%; height: 350px;">
-			     
-			    </div>
 			     <c:set var="rank" value="${rank + 1}"/>
+			    </div>
+			     
+			      <div class="bg-dark me-md-3 px-3 px-md-5 text-center text-white overflow-hidden rounded col-sm-2 ">
+			      <div class="my-3">
+			        <h5>Rank <c:out value="${rank}"/></h5>
+			        <h6>${sneaker3.name}</h6>
+			      </div>
+			      <img src="getSneakerImage/<c:out value='${sneaker3.id}'/>" class="bg-light shadow-sm mx-auto" style="width: 80%; height: 350px;">
+			    <c:set var="rank" value="${rank + 1}"/>
+			    </div>
+			    
+			     <div class="bg-dark me-md-3 px-3 px-md-5 text-center text-white overflow-hidden rounded col-sm-2 ">
+			      <div class="my-3">
+			        <h5>Rank <c:out value="${rank}"/></h5>
+			        <h6>${sneaker4.name}</h6>
+			      </div>
+			      <img src="getSneakerImage/<c:out value='${sneaker4.id}'/>" class="bg-light shadow-sm mx-auto" style="width: 80%; height: 350px;">
+			    <c:set var="rank" value="${rank + 1}"/>
+			    </div>
+			    
+			     <div class="bg-dark me-md-3 px-3 px-md-5 text-center text-white overflow-hidden rounded col-sm-2 ">
+			      <div class="my-3">
+			        <h5>Rank <c:out value="${rank}"/></h5>
+			        <h6>${sneaker5.name}</h6>
+			      </div>
+			      <img src="getSneakerImage/<c:out value='${sneaker5.id}'/>" class="bg-light shadow-sm mx-auto" style="width: 80%; height: 350px;">
+			    <c:set var="rank" value="${rank + 1}"/>
+			    </div>
+			     
 			  </div>
-		
+			
 
 		</c:forEach>
 
