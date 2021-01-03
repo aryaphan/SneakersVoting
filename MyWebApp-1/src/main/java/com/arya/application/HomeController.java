@@ -40,7 +40,7 @@ public class HomeController {
 	
 	@RequestMapping(value="/showRanks", method = RequestMethod.GET)
 	public String rankingPage() {
-		System.out.println("calling home page");
+		System.out.println("calling showRank page");
 		return "showRanks";
 	}
 	
@@ -51,11 +51,8 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value="/vote", method = RequestMethod.GET)
-//	public String secondPage() {
-//		return "second" ;
-//	}
 	public ModelAndView listSneaker(ModelAndView model) throws IOException {
-		System.out.println("calling second page");
+		System.out.println("calling voting page");
 		List<Sneaker> sneakerList = dao.getAllSneakers();
 		model.addObject("sneakerList", sneakerList);
 		model.setViewName("vote");
