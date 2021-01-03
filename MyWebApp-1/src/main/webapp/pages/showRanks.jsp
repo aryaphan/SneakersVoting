@@ -58,7 +58,7 @@
   <c:set var="endIndex" scope="page" value="9"/>
 		<c:forEach begin="${startIndex}" end="${endIndex}" step="5" var="index">
 			<div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 row">
-				<c:forEach begin="${index}" end="${index + 5}" step="1" var="i">
+				<c:forEach begin="${index}" end="${index + 4}" step="1" var="i">
 					<c:set var="sneaker" value="${sneakerRanks.get(i)}"/>
 			    	<div class="bg-dark me-md-3 px-3 px-md-5 text-center text-white overflow-hidden rounded col-sm-2 ">
 			      		<div class="my-3">
