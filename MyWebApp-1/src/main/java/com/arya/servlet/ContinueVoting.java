@@ -80,10 +80,6 @@ public class ContinueVoting extends HttpServlet {
 		}
 		
 		
-//		RequestDispatcher requestDispatcher = request.getRequestDispatcher("nextRound.jsp");
-//		requestDispatcher.forward(request, response);
-		//RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/nextRound.jsp");
-		//dispatcher.forward(request, response);
 	}
 	
 }
