@@ -11,12 +11,7 @@
 	background-color: #010c19b0;
 }
 
-body {
-	background-image: url(https://cdn.wallpapersafari.com/17/61/ENy3f6.jpg);
-	background-size: cover;
-	background: white;
 
-}
 
 p {
 	text-align: center;
@@ -86,8 +81,17 @@ td {
     flex: 1;
   }
 }
+/* 
+body {
+    background:  linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(https://i.imgur.com/D1zUlfc.jpg);
+	background-image: url(https://cdn.wallpapersafari.com/17/61/ENy3f6.jpg);
+	background-size: cover;
+	background: white;
 
-.box {
+} */
+
+/* .box {
 	background:  linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(https://i.imgur.com/D1zUlfc.jpg); 
 	background-size: cover;
 }
+ */

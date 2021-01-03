@@ -66,33 +66,35 @@
   </nav>
 </header>
 
-
+<!-- display-4  fw-normal pt-3  pt-md-5  py-3-->
 
 <form action="/ContinueVoting" method="GET">
 <main>
-  <div class="position-relative text-center bg-light box">
-    <div class="col-md-5 p-lg-5 mx-auto my-5">
-      <h1 class="display-4 fw-normal">PICK ONE</h1>
-      <h4>${sneaker1.name}</h4> <h2>VS</h2> <h4>${sneaker2.name}</h4>
+ <div class="position-relative text-center bg-light box">
+    <div class="col-md-5 mx-auto">
+      <!-- <h3 class="display-7">PICK ONE</h3> -->
+      <h2 class="display-4">VS</h2>
     </div>
 
-  </div>
+  </div> 
 
-  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 ">
-    <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden rounded ">
-      <div class="my-3 py-3">
-        <h2 class="display-5">${sneaker1.name}</h2>
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 row">
+  	<div class="col-1"> </div>
+    <div class="bg-dark me-md-3 px-3 px-md-5 text-center text-white overflow-hidden rounded col-5">
+      <div class="my-3">
+        <h5>${sneaker1.name}</h5>
       </div>
        <input align="center" class="photo" type="image" name="img1" src="getSneakerImage/<c:out value='${sneaker1.id}'/>" class="bg-light shadow-sm mx-auto" style="width: 80%; height: 350px;">
       
     
     </div>
-    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden rounded">
-      <div class="my-3 p-3">
-        <h2 class="display-5">${sneaker2.name}</h2>
+    <div class="bg-light me-md-3 px-3 px-md-5 text-center overflow-hidden rounded col-5">
+      <div class="my-3">
+        <h5>${sneaker2.name}</h5>
       </div>
        <input class="photo" type="image" name="img2" src="getSneakerImage/<c:out value='${sneaker2.id}'/>" class="bg-light shadow-sm mx-auto" style="width: 80%; height: 350px;"> 
     </div>
+    <div class="col-1"></div>
   </div>
   
   	<div>
