@@ -44,11 +44,11 @@
 	List<Sneaker> sneakerRanks = RatingHandler.getRanking();
 	pageContext.setAttribute("sneakerRanks", sneakerRanks);
 %>
-
+<!-- class="display-4 fw-normal" -->
 <main>
   <div class="position-relative text-center bg-light box">
     <div class="col-md-5 mx-auto" >
-      <h2 class="display-4 fw-normal">TOP 10 SNEAKERS <fmt:formatDate value="${date}" pattern="yyyy" /></h2>
+      <h1 >TOP 10 SNEAKERS <fmt:formatDate value="${date}" pattern="yyyy" /></h1>
     </div>
  
   </div>
@@ -60,7 +60,7 @@
 			<div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 row">
 				<c:forEach begin="${index}" end="${index + 4}" step="1" var="i">
 					<c:set var="sneaker" value="${sneakerRanks.get(i)}"/>
-			    	<div class="bg-dark me-md-3  text-center text-white overflow-hidden rounded col-sm-2 ">
+			    	<div class="bg-dark me-md-3 text-center text-white overflow-hidden rounded col-sm-2 ">
 			      		<div class="my-3">
 			        		<h5>Rank <c:out value="${rank}"/></h5>
 			        		<h6>${sneaker.name}</h6>
