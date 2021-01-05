@@ -108,9 +108,12 @@
  
 </main>
 
-<footer class="container py-5">
+<footer class="container py-2">
   <div class="row">
-    <div class="col-4 col-md">
+  	<div class="col-sm-12  text-center ">
+  		<h4>Made by Arya Phan</h4>
+  	</div>
+   <!--  <div class="col-4 col-md">
       <h5>Features</h5>
       <ul class="list-unstyled text-small">
         <li><a class="link-secondary" href="#">Spring Boot</a></li>
@@ -122,8 +125,7 @@
       <ul class="list-unstyled text-small">
         <li><a class="link-secondary" href="#">Resource name</a></li>
         <li><a class="link-secondary" href="#">Resource</a></li>
-        <li><a class="link-secondary" href="#">Another resource</a></li>
-        <li><a class="link-secondary" href="#">Final resource</a></li>
+        
       </ul>
     </div>
     <div class="col-4 col-md">
@@ -134,7 +136,7 @@
         <li><a class="link-secondary" href="#">Privacy</a></li>
         <li><a class="link-secondary" href="#">Terms</a></li>
       </ul>
-    </div>
+    </div> -->
   </div>
 </footer>
 	
