@@ -84,7 +84,7 @@
       <div class="my-3">
         <h5>${sneaker1.name}</h5>
       </div>
-       <input align="center" class="photo" type="image" name="img1" src="getSneakerImage/<c:out value='${sneaker1.id}'/>" class="bg-light shadow-sm mx-auto" style="width: 80%; height: 350px;">
+       <input class="photo" type="image" name="img1" src="getSneakerImage/<c:out value='${sneaker1.id}'/>" class="bg-light shadow-sm mx-auto" style="width: 100%; height: 350px;">
       
     
     </div>
@@ -92,7 +92,7 @@
       <div class="my-3">
         <h5>${sneaker2.name}</h5>
       </div>
-       <input class="photo" type="image" name="img2" src="getSneakerImage/<c:out value='${sneaker2.id}'/>" class="bg-light shadow-sm mx-auto" style="width: 80%; height: 350px;"> 
+       <input class="photo" type="image" name="img2" src="getSneakerImage/<c:out value='${sneaker2.id}'/>" class="bg-light shadow-sm mx-auto" style="width: 100%; height: 350px;"> 
     </div>
     <div class="col-1"></div>
   </div>

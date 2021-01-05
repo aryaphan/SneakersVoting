@@ -65,7 +65,7 @@
 			        		<h5>Rank <c:out value="${rank}"/></h5>
 			        		<h6>${sneaker.name}</h6>
 			     		</div>
-			     	 <img src="getSneakerImage/<c:out value='${sneaker.id}'/>" class="bg-light shadow-sm mx-auto" style="width: 80%; height: 350px;">
+			     	 <img src="getSneakerImage/<c:out value='${sneaker.id}'/>" class="bg-light shadow-sm mx-auto" style="width: 100%; height: 350px;">
 			    	<c:set var="rank" value="${rank + 1}"/>
 			    </div>
 			    </c:forEach>
