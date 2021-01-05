@@ -39,7 +39,7 @@
   </nav>
 </header>
 
-
+<!-- px-md-5 px-3 -->
 <%
 	List<Sneaker> sneakerRanks = RatingHandler.getRanking();
 	pageContext.setAttribute("sneakerRanks", sneakerRanks);
@@ -60,7 +60,7 @@
 			<div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 row">
 				<c:forEach begin="${index}" end="${index + 4}" step="1" var="i">
 					<c:set var="sneaker" value="${sneakerRanks.get(i)}"/>
-			    	<div class="bg-dark me-md-3 px-3 px-md-5 text-center text-white overflow-hidden rounded col-sm-2 ">
+			    	<div class="bg-dark me-md-3  text-center text-white overflow-hidden rounded col-sm-2 ">
 			      		<div class="my-3">
 			        		<h5>Rank <c:out value="${rank}"/></h5>
 			        		<h6>${sneaker.name}</h6>
