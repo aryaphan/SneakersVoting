@@ -82,6 +82,11 @@ td {
   }
 }
 
+h2 {
+	font-family: 'Poppins', sans-serif;
+}
+
+
 h6 {
 	font-size: 15px;	
 }
@@ -89,6 +94,25 @@ h6 {
 h5 {
 	font-size: 15px;
 }
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.rounded {
+    border-radius: 2rem!important;
+}
+
 /* 
 body {
     background:  linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(https://i.imgur.com/D1zUlfc.jpg);
@@ -98,8 +122,9 @@ body {
 
 } */
 
-/* .box {
-	background:  linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(https://i.imgur.com/D1zUlfc.jpg); 
-	background-size: cover;
+.box {
+	/* background:  linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(https://i.imgur.com/D1zUlfc.jpg); 
+	background-size: cover; */
+	padding-top: .3rem;
+	padding-bottom: .3rem;
 }
- */
