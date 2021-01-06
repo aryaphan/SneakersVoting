@@ -1,32 +1,4 @@
 @charset "ISO-8859-1";
-/* h2 {
-	font-family: 'Space Grotesk', sans-serif;
-
-	font-size: 800;
-	color: #b0b5ff;
-}
-
-.jumbotron {
-	padding: 0.1rem 1rem;
-	background-color: #010c19b0;
-}
-
-
-
-p {
-	text-align: center;
-	margin-bottom: 0.3rem;
-	font-family: 'Libre Franklin', sans-serif;
-	font-family: 'Quicksand', sans-serif;
-	font-family: 'Roboto', sans-serif;
-	font-size: 30px;
-	color: black;
-}
-
-th {
-	color: black;
-	text-align: center;
-} */
 
 .photo{
 	box-shadow: 0px 16px 10px -8px rgba(0,0,0,.4);
@@ -87,10 +59,6 @@ h2 {
 }
 
 
-h6 {
-	font-size: 15px;	
-}
-
 h5 {
 	font-size: 15px;
 	font-family: 'Poppins', sans-serif;
@@ -123,10 +91,8 @@ h5 {
    margin-right: 8%;
 } 
 
-/* .box {
-	background:  linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(https://i.imgur.com/D1zUlfc.jpg); 
-	background-size: cover;
-	padding-top: .3rem;
-	padding-bottom: .3rem;
+.box {
+	padding-top: 6px;
+	padding-bottom: 3px;
 }
- */
+ 

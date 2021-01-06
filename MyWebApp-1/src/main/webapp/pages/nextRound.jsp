@@ -21,8 +21,10 @@
 	 <link href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 	
 	<link rel="stylesheet" type="text/css" href="css/vote.css">
-
-	  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	 <!--   <link rel="stylesheet" href="https://fontawesome.com/v4.7.0/assets/font-awesome/css/font-awesome.css"> -->
+	
+	     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap" rel="stylesheet">
 </head>
 <body>
 <header class="site-header sticky-top py-1">
@@ -55,32 +57,33 @@
 
 <form action="/ContinueVoting" method="GET">
 <main>
-  <div class="position-relative text-center bg-light box">
+ <div class="position-relative text-center bg-light box">
     <div class="col-md-5 mx-auto">
-      <!-- <h3 class="display-7">PICK ONE</h3> -->
       <h2 class="display-4">VS</h2>
     </div>
 
   </div> 
-
-  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 row">
-  	<div class="col-1"> </div>
-    <div class="bg-dark me-md-3 px-3 px-md-5 text-center text-white overflow-hidden rounded col-5">
+<div class="vote">
+	<!-- ps-md-3 bg-dark bg-light text-white-->
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-5 row">
+  	<!-- <div class="col-1"> </div> -->
+    <div class=" border me-md-3 px-3 px-md-5 text-center  overflow-hidden rounded col-6">
       <div class="my-3">
         <h5>${sneaker1.name}</h5>
       </div>
-       <input align="center" class="photo" type="image" name="img1" src="getSneakerImage/<c:out value='${sneaker1.id}'/>" class="bg-light shadow-sm mx-auto" style="width: 80%; height: 350px;">
+       <input class="photo" type="image" name="img1" src="getSneakerImage/<c:out value='${sneaker1.id}'/>" class="bg-light shadow-sm mx-auto" style="width: 80%">
       
     
     </div>
-    <div class="bg-light me-md-3 px-3 px-md-5 text-center overflow-hidden rounded col-5">
+    <div class=" border me-md-3 px-3 px-md-5 text-center overflow-hidden rounded col-6">
       <div class="my-3">
         <h5>${sneaker2.name}</h5>
       </div>
-       <input class="photo" type="image" name="img2" src="getSneakerImage/<c:out value='${sneaker2.id}'/>" class="bg-light shadow-sm mx-auto" style="width: 80%; height: 350px;"> 
+       <input class="photo" type="image" name="img2" src="getSneakerImage/<c:out value='${sneaker2.id}'/>" class="bg-light shadow-sm mx-auto" style="width: 80%"> 
     </div>
-    <div class="col-1"></div>
+    <!-- <div class="col-1"></div> -->
   </div>
+ </div>
   
   	<div>
 		<input type="hidden" name="id1" value="${sneaker1.id}">
@@ -93,11 +96,14 @@
  
 </main>
 
-<footer class="container py-5">
+<footer class="container py-2">
   <div class="row">
   	<div class="col-sm-12  text-center ">
-  		<h6>Made by Arya Phan</h6>
+  		<h4>Made by Arya Phan</h4>
+  		<a href="https://github.com/aryaphan" class="fa fa-github fa-6" style="font-size: 48px; color:black" ></a>
   	</div>
+  	
+  	
    <!--  <div class="col-4 col-md">
       <h5>Features</h5>
       <ul class="list-unstyled text-small">
@@ -126,7 +132,6 @@
 </footer>
 	
 </form>
-
 
 </body>
 </html>

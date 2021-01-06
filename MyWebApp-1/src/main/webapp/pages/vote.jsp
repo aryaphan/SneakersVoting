@@ -75,7 +75,6 @@
 <main>
  <div class="position-relative text-center bg-light box">
     <div class="col-md-5 mx-auto">
-      <!-- <h3 class="display-7">PICK ONE</h3> -->
       <h2 class="display-4">VS</h2>
     </div>
 
