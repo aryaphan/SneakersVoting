@@ -42,10 +42,13 @@
 </header>
 
 <div class="about">
-	<h1>Hi, I'm Arya :)</h1>
-	<div class="text">
-		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-	</div>
+	<h1>Hi, I'm Arya Phan</h1>
+
+	<p>I'm a second-year Computer Engineering student at UBC. Sneakers Voting is my first personal project that was built using Spring Boot Framework comprising of Java, JSP, HTML, CSS and MySQL
+	Database. This web app is the biggest accomplishment in my self-learning progress so far. It would provide information to the sneaker industry about what customers are interested in and what the 
+	current trends are. I was really excited because I could combine both my interests in school and outside of school together to make a product other people can use.
+	  <p>
+	
 </div>
 
 </body>
