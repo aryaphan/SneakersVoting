@@ -30,6 +30,8 @@ td {
   background-color: rgba(0, 0, 0, .85);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
+  font-family: 'Poppins', sans-serif;
+  
 }
 .site-header a {
   color: #8e8e8e;
@@ -52,6 +54,15 @@ td {
   .flex-md-equal > * {
     flex: 1;
   }
+}
+
+p {
+	font-family: 'Roboto', sans-serif;
+	
+}
+
+h1{
+	font-family: 'Poppins', sans-serif;
 }
 
 h2 {
@@ -96,6 +107,13 @@ h4 {
    margin-left: 8%;
    margin-right: 8%;
 } 
+
+.about {
+	margin: 6% 20%;
+	/* margin-left: 20%;
+	margin-right: 20%; */
+}
+
 
 .box {
 	padding-top: 9px;

@@ -38,9 +38,10 @@
     	<a class="py-2 d-none d-md-inline-block" href="showRanks">Ranking</a>
     </form>
     
-   
-    <a class="py-2 d-none d-md-inline-block" href="#">About</a>
-    
+     
+    <form action="/about" method="GET">
+    	<a class="py-2 d-none d-md-inline-block" href="about">About</a>
+    </form>
   </nav>
 </header>
 
@@ -85,7 +86,7 @@
  
 </main>
 
-<footer class="container py-2">
+<!-- <footer class="container py-2">
   <div class="row">
   	<div class="col-sm-12  text-center ">
   		<h4>Made by Arya Phan</h4>
@@ -93,7 +94,7 @@
   	</div>
   	
   	
-   <!--  <div class="col-4 col-md">
+    <div class="col-4 col-md">
       <h5>Features</h5>
       <ul class="list-unstyled text-small">
         <li><a class="link-secondary" href="#">Spring Boot</a></li>
@@ -116,10 +117,10 @@
         <li><a class="link-secondary" href="#">Privacy</a></li>
         <li><a class="link-secondary" href="#">Terms</a></li>
       </ul>
-    </div> -->
+    </div>
   </div>
 </footer>
-
+ -->
 
 
 
