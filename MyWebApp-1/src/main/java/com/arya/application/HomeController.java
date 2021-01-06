@@ -44,12 +44,17 @@ public class HomeController {
 		return "showRanks";
 	}
 	
-	
-	@RequestMapping(value="/redirect", method = RequestMethod.GET)
-	public String redirect() {
-		return "redirect:secondPage";
+	@RequestMapping(value="/about", method = RequestMethod.GET)
+	public String aboutPage() {
+		System.out.println("calling about page");
+		return "about";
 	}
 	
+	
+	/*
+	 * @RequestMapping(value="/redirect", method = RequestMethod.GET) public String
+	 * redirect() { return "redirect:secondPage"; }
+	 */
 	@RequestMapping(value="/vote", method = RequestMethod.GET)
 	public ModelAndView listSneaker(ModelAndView model) throws IOException {
 		System.out.println("calling voting page");
