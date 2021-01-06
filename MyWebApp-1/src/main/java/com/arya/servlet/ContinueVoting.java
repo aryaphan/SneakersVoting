@@ -44,12 +44,12 @@ public class ContinueVoting extends HttpServlet {
 		
 		if(img1 != null) {
 			//sneaker A wins
-			System.out.println("calculating sneaker A score");
+			System.out.println("sneaker A wins. calculating scores");
 			RatingHandler.getNewRating(Integer.parseInt(id1), Integer.parseInt(id2), true);
 		}
 		else if (img2 != null) {
 			//sneaker B wins
-			System.out.println("calculating sneaker B score");
+			System.out.println("sneaker B wins. calculating scores");
 			RatingHandler.getNewRating(Integer.parseInt(id1), Integer.parseInt(id2), false);
 		}
 		
