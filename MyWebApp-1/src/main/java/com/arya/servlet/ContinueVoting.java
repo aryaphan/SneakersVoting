@@ -76,6 +76,7 @@ public class ContinueVoting extends HttpServlet {
 			 * ArrayList<Sneaker> sneakerRanks = RatingHandler.getRanking();
 			 * request.setAttribute("sneakerRanks", sneakerRanks);
 			 */
+			counter = 0;
 			getServletConfig().getServletContext().getRequestDispatcher("/pages/showRanks.jsp").forward(request, response);
 		}
 		
