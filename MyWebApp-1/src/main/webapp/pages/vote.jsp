@@ -85,7 +85,7 @@
   	<!-- <div class="col-1"> </div> -->
     <div class=" border me-md-3 px-3 px-md-5 text-center  overflow-hidden rounded col-6">
       <div class="my-3">
-        <h5>${sneaker1.name}</h5>
+        <h4>${sneaker1.name}</h4>
       </div>
        <input class="photo" type="image" name="img1" src="getSneakerImage/<c:out value='${sneaker1.id}'/>" class="bg-light shadow-sm mx-auto" style="width: 80%">
       
@@ -93,7 +93,7 @@
     </div>
     <div class=" border me-md-3 px-3 px-md-5 text-center overflow-hidden rounded col-6">
       <div class="my-3">
-        <h5>${sneaker2.name}</h5>
+        <h4>${sneaker2.name}</h4>
       </div>
        <input class="photo" type="image" name="img2" src="getSneakerImage/<c:out value='${sneaker2.id}'/>" class="bg-light shadow-sm mx-auto" style="width: 80%"> 
     </div>
