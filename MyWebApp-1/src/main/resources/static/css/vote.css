@@ -93,6 +93,8 @@ h6 {
 
 h5 {
 	font-size: 15px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
 }
 
 .fa {
@@ -111,20 +113,20 @@ h5 {
 
 .rounded {
     border-radius: 2rem!important;
+    padding-bottom: 30px;
+    
 }
 
-/* 
-body {
-    background:  linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(https://i.imgur.com/D1zUlfc.jpg);
-	background-image: url(https://cdn.wallpapersafari.com/17/61/ENy3f6.jpg);
+
+.vote {
+   margin-left: 8%;
+   margin-right: 8%;
+} 
+
+/* .box {
+	background:  linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(https://i.imgur.com/D1zUlfc.jpg); 
 	background-size: cover;
-	background: white;
-
-} */
-
-.box {
-	/* background:  linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(https://i.imgur.com/D1zUlfc.jpg); 
-	background-size: cover; */
 	padding-top: .3rem;
 	padding-bottom: .3rem;
 }
+ */

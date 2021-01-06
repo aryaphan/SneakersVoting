@@ -17,6 +17,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
  <link href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="css/vote.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	 <!--   <link rel="stylesheet" href="https://fontawesome.com/v4.7.0/assets/font-awesome/css/font-awesome.css"> -->
+	
+	     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap" rel="stylesheet">
+
 <title>Ranks</title>
 </head>
 <body>
@@ -48,7 +53,7 @@
 <main>
   <div class="position-relative text-center bg-light box">
     <div class="col-md-5 mx-auto" >
-      <h1 >TOP 10 SNEAKERS <fmt:formatDate value="${date}" pattern="yyyy" /></h1>
+      <h2>TOP 10 SNEAKERS <fmt:formatDate value="${date}" pattern="yyyy" /></h2>
     </div>
  
   </div>
@@ -57,15 +62,16 @@
   <c:set var="startIndex" scope="page" value="0"/>
   <c:set var="endIndex" scope="page" value="9"/>
 		<c:forEach begin="${startIndex}" end="${endIndex}" step="5" var="index">
-			<div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 row">
+			<div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-5 row">
 				<c:forEach begin="${index}" end="${index + 4}" step="1" var="i">
 					<c:set var="sneaker" value="${sneakerRanks.get(i)}"/>
-			    	<div class="bg-dark me-md-3 text-center text-white overflow-hidden rounded col-sm-2 ">
+					<!-- text-white -->
+			    	<div class="border me-md-3 text-center  overflow-hidden rounded col-sm-2 ">
 			      		<div class="my-3">
 			        		<h5>Rank <c:out value="${rank}"/></h5>
-			        		<h6>${sneaker.name}</h6>
+			        		<h5>${sneaker.name}</h5>
 			     		</div>
-			     	 <img src="getSneakerImage/<c:out value='${sneaker.id}'/>" class="bg-light shadow-sm mx-auto" style="width: 100%; height: 350px;">
+			     	 <img src="getSneakerImage/<c:out value='${sneaker.id}'/>" class="bg-light shadow-sm mx-auto" style="width: 80%">
 			    	<c:set var="rank" value="${rank + 1}"/>
 			    </div>
 			    </c:forEach>
@@ -83,7 +89,10 @@
   <div class="row">
   	<div class="col-sm-12  text-center ">
   		<h4>Made by Arya Phan</h4>
+  		<a href="https://github.com/aryaphan" class="fa fa-github fa-6" style="font-size: 48px; color:black" ></a>
   	</div>
+  	
+  	
    <!--  <div class="col-4 col-md">
       <h5>Features</h5>
       <ul class="list-unstyled text-small">

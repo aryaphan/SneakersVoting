@@ -23,11 +23,9 @@
 	
 	<link rel="stylesheet" type="text/css" href="css/vote.css">
 
-	  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	   <link rel="stylesheet" href="https://fontawesome.com/v4.7.0/assets/font-awesome/css/font-awesome.css">
+	 <!--   <link rel="stylesheet" href="https://fontawesome.com/v4.7.0/assets/font-awesome/css/font-awesome.css"> -->
 	
-	     <script src="https://use.fonticons.com/ffe176a3.js"></script>
 	     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap" rel="stylesheet">
 	 
 </head>
@@ -82,7 +80,7 @@
     </div>
 
   </div> 
-	
+<div class="vote">
 	<!-- ps-md-3 bg-dark bg-light text-white-->
   <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-5 row">
   	<!-- <div class="col-1"> </div> -->
@@ -102,6 +100,7 @@
     </div>
     <!-- <div class="col-1"></div> -->
   </div>
+ </div>
   
   	<div>
 		<input type="hidden" name="id1" value="${sneaker1.id}">
