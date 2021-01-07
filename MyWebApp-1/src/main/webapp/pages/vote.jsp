@@ -85,21 +85,21 @@
 </nav>
 </header> 
 
-<!-- display-4  fw-normal pt-3  pt-md-5  py-3-->
+<!-- display-4  fw-normal pt-3  pt-md-5  py-3 class="display-4"-->
 
 <form action="/ContinueVoting" method="GET">
 <main>
  <div class="position-relative text-center bg-light box">
     <div class="col-md-5 mx-auto">
-      <h2 class="display-4">VS</h2>
+      <h2 id="vs" >VS</h2>
     </div>
 
   </div> 
 <div class="vote">
 	<!-- ps-md-3 bg-dark bg-light text-white-->
   <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-5 row">
-  	<!-- <div class="col-1"> </div> -->
-    <div class=" border me-md-3 px-3 px-md-5 text-center  overflow-hidden rounded col-6">
+  	<!-- me-md-3 -->
+    <div class=" border  px-3 px-md-5 text-center  overflow-hidden rounded col-sm-6">
       <div class="my-3">
         <h4>${sneaker1.name}</h4>
       </div>
@@ -107,13 +107,13 @@
       
     
     </div>
-    <div class=" border me-md-3 px-3 px-md-5 text-center overflow-hidden rounded col-6">
+    <div class=" border px-3 px-md-5 text-center overflow-hidden rounded col-sm-6">
       <div class="my-3">
         <h4>${sneaker2.name}</h4>
       </div>
        <input class="photo" type="image" name="img2" src="getSneakerImage/<c:out value='${sneaker2.id}'/>" class="bg-light shadow-sm mx-auto" style="width: 80%"> 
     </div>
-    <!-- <div class="col-1"></div> -->
+   
   </div>
  </div>
   
