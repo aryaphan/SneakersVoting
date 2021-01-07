@@ -66,6 +66,7 @@ public class HomeController {
 	
 	/*
 	 * Displays an image that matches <code>id</code> in the database
+	 * @param id: identifier of the image to be displayed
 	 * */
 	@RequestMapping(value="/getSneakerImage/{id}")
 	public void getSneakerImage(HttpServletResponse response, @PathVariable("id") int id) throws Exception {

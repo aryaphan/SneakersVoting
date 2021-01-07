@@ -23,22 +23,29 @@ import java.io.InputStream;
 import com.arya.dbconnection.ConnectionProvider;
 import com.arya.model.Sneaker;
 
+/*
+ * Connects to MySQL database once the app is launched
+ * */
 @Service
 public class SneakerDAO implements GetSneakers {
-	//private Connection conn;
+	
 	private JdbcTemplate jdbcTemp;
 	
-//	public SneakerDAO() {
-//		conn = ConnectionProvider.getConnection();
-//	}
-	
+	/*
+	 * Connects to MySQL database
+	 * */
 	public SneakerDAO(DataSource dataSource) {
 		// TODO Auto-generated constructor stub
+		
+		//dataSource comes from Config.java
 		jdbcTemp = new JdbcTemplate(dataSource);
 		System.out.println("database connected");
 	}
 	
-	public List<Sneaker> getAllSneakers(){ //throws IOException {
+	/*
+	 * Returns the list of all sneakers in the database
+	 * */
+	public List<Sneaker> getAllSneakers(){ 
 		System.out.println("Retrieving data");
 		
 		List<Sneaker> sneakers = jdbcTemp.query("select * from sneakers", new RowMapper<Sneaker>() {
@@ -56,6 +63,12 @@ public class SneakerDAO implements GetSneakers {
 
 	}
 	
+	/*
+	 * Returns an image that matches <code>id</code> in MySQL database
+	 * 
+	 * @param id: identifier of the image to be displayed
+	 * @return: the image that matches <code>id</code> in MySQL database in type Blob
+	 * */
 	@Override
 	public Blob getPhotoById(int id) {
 		String query = "select image from sneakers where image_id=?";
