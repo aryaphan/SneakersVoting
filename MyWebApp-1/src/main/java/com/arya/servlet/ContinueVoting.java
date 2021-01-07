@@ -18,9 +18,14 @@ import com.arya.dao.SneakerDAO;
 import com.arya.model.Sneaker;
 import com.arya.rating.RatingHandler;
 
+/*
+ * Handles requests and responses of vote.jsp and nextRound.jsp. Redirects to appropriate jsp pages 
+ * */
 @WebServlet("/ContinueVoting")
 public class ContinueVoting extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	//counter controls how many times nextRound.jsp has been called
 	int counter = 0;
 	
 	@Autowired
@@ -58,24 +63,26 @@ public class ContinueVoting extends HttpServlet {
 		int num1 = ThreadLocalRandom.current().nextInt(0,size);
 		int num2 = ThreadLocalRandom.current().nextInt(0,size);
 		
+		//make sure num1 != num2
 		while (num2 == num1) {
 			num2 = ThreadLocalRandom.current().nextInt(0,size);
 		}
 		
+		//sends requests to the next page
 		request.setAttribute("id1", num1);
 		request.setAttribute("id2", num2);
 		request.setAttribute("sneakerList", sneakerList);
 		counter++;
 		request.setAttribute("counter", counter);
 		
+		//if counter < 10, continue voting
 		if (counter < 10) {
 			getServletConfig().getServletContext().getRequestDispatcher("/pages/nextRound.jsp").forward(request, response);
 		}
+		
+		//otherwise, show rankings
 		else {
-			/*
-			 * ArrayList<Sneaker> sneakerRanks = RatingHandler.getRanking();
-			 * request.setAttribute("sneakerRanks", sneakerRanks);
-			 */
+			//reset counter
 			counter = 0;
 			getServletConfig().getServletContext().getRequestDispatcher("/pages/showRanks.jsp").forward(request, response);
 		}
