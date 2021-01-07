@@ -56,13 +56,62 @@
 
 
 <div class="about">
-	<h1>Hi, I'm Arya Phan</h1>
-
+	<h2>Hi, I'm Arya Phan &#128522</h2>
+	<div class="text">
 	<p>I'm a Computer Engineering student at UBC. Sneakers Voting is my first personal project that was built using Spring Boot Framework comprising of Java, JSP, HTML, CSS and MySQL
-	Database. This web app is the biggest accomplishment in my self-learning progress so far. It would provide information to the sneaker industry about what customers are interested in and what the 
-	current trends are. I was really excited because I could combine both my interests in school and outside of school together to make a product other people can use.
-	  <p>
+	Database. This project is the biggest accomplishment in my self-learning progress so far. Sneakers Voting would provide information to the sneaker industry about what customers are interested in and what the 
+	current trends are. It was really exciting because I could combine both my interests in school and outside of school together to make a product other people can use.
+	  </p>
+	<p>Sneakers voting page generates and displays 2 random pairs of sneakers from MySQL database. Users only need to click the image of the sneakers they are interested in. Top 10 sneakers are shown after 
+	multiple rounds of voting or via the "Ranking" link.
+	</p>
 	
+	<p>Features to be added:</p>
+	<ul>
+		<li>Allow users to upload photos of their own sneakers</li>
+		<li>Improve user interface for mobile devices</li>
+	</ul>
+	
+	<p>Thanks for visiting. If you're hiring coop students, let me know &#128518</p>
+	</div>
 </div>
+
+<footer class="container py-2">
+  <div class="row">
+  	<div class="col-sm-12  text-center ">
+  		<!-- <h4>Made by Arya Phan</h4> -->
+  		 <a href="https://github.com/aryaphan" class="fa fa-github fa-6" style="font-size: 48px; color:black" ></a>
+  		&nbsp; &nbsp;   &nbsp;
+  		<a href="https://www.linkedin.com/in/aryaphan" class="fa fa-linkedin fa-6" style="font-size: 48px;" ></a>
+  	</div>
+  	
+  	
+   <!--  <div class="col-4 col-md">
+      <h5>Features</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary" href="#">Spring Boot</a></li>
+        <li><a class="link-secondary" href="#">Java</a></li>
+      </ul>
+    </div>
+    <div class="col-4 col-md">
+      <h5>Resources</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary" href="#">Resource name</a></li>
+        <li><a class="link-secondary" href="#">Resource</a></li>
+        
+      </ul>
+    </div>
+    <div class="col-4 col-md">
+      <h5>About</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary" href="#">Team</a></li>
+        <li><a class="link-secondary" href="#">Locations</a></li>
+        <li><a class="link-secondary" href="#">Privacy</a></li>
+        <li><a class="link-secondary" href="#">Terms</a></li>
+      </ul>
+    </div>
+  </div> -->
+</footer> 
+	
 </body>
 </html>
