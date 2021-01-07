@@ -24,7 +24,9 @@ import com.arya.model.Sneaker;
 
 import java.util.List;
 
-
+/*
+ * Handles requests and returns appropriate JSP pages
+ * */
 @Controller
 public class HomeController {
 	
@@ -32,29 +34,27 @@ public class HomeController {
 	@Autowired
 	private SneakerDAO dao;
 	
-	@RequestMapping(value="/home", method = RequestMethod.GET)
-	public String homePage() {
-		System.out.println("calling home page");
-		return "home";
-	}
-	
+	/*
+	 * Returns showRanks.jsp page
+	 * */
 	@RequestMapping(value="/showRanks", method = RequestMethod.GET)
 	public String rankingPage() {
 		System.out.println("calling showRank page");
 		return "showRanks";
 	}
 	
+	/*
+	 * Returns about.jsp page
+	 * */
 	@RequestMapping(value="/about", method = RequestMethod.GET)
 	public String aboutPage() {
 		System.out.println("calling about page");
 		return "about";
 	}
 	
-	
 	/*
-	 * @RequestMapping(value="/redirect", method = RequestMethod.GET) public String
-	 * redirect() { return "redirect:secondPage"; }
-	 */
+	 * Sends the list of all sneakers in the database to vote.jsp page to handle and returns vote.jsp page
+	 * */
 	@RequestMapping(value="/vote", method = RequestMethod.GET)
 	public ModelAndView listSneaker(ModelAndView model) throws IOException {
 		System.out.println("calling voting page");
@@ -64,6 +64,9 @@ public class HomeController {
 		return model;
 	}
 	
+	/*
+	 * Displays an image that matches <code>id</code> in the database
+	 * */
 	@RequestMapping(value="/getSneakerImage/{id}")
 	public void getSneakerImage(HttpServletResponse response, @PathVariable("id") int id) throws Exception {
 		response.setContentType("image/jpg");
