@@ -74,7 +74,7 @@
     </div>
  
   </div>
-  
+ <!--  me-md-3 -->
   <c:set var="rank" value="1"/>
   <c:set var="startIndex" scope="page" value="0"/>
   <c:set var="endIndex" scope="page" value="9"/>
@@ -83,7 +83,7 @@
 				<c:forEach begin="${index}" end="${index + 4}" step="1" var="i">
 					<c:set var="sneaker" value="${sneakerRanks.get(i)}"/>
 					<!-- text-white -->
-			    	<div class="border me-md-3 text-center  overflow-hidden rounded col-sm-2 ">
+			    	<div class="border  text-center  overflow-hidden rounded col-sm-2 ">
 			      		<div class="my-3">
 			        		<h5>Rank <c:out value="${rank}"/></h5>
 			        		<h5>${sneaker.name}</h5>

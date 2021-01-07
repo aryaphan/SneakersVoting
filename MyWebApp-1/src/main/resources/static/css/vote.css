@@ -56,7 +56,7 @@ td {
   }
 }
 
-p {
+.text {
 	font-family: 'Roboto', sans-serif;
 	
 }
@@ -99,6 +99,8 @@ h4 {
 .rounded {
     border-radius: 2rem!important;
     padding-bottom: 30px;
+    margin-top: 1%;
+    margin-right: 2%;
     
 }
 
@@ -106,6 +108,7 @@ h4 {
 .vote {
    margin-left: 8%;
    margin-right: 8%;
+   margin-top: 3%;
 } 
 
 .about {
@@ -117,6 +120,6 @@ h4 {
 
 .box {
 	padding-top: 9px;
-	padding-bottom: 6px;
+	padding-bottom: 2px;
 }
  
