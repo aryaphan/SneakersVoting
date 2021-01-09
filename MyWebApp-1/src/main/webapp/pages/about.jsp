@@ -61,21 +61,35 @@
 <div class="about">
 	<h2>Hi, I'm Arya Phan &#128522</h2>
 	<div class="text">
-	<p>I'm a Computer Engineering student at UBC. Sneakers Voting is my first personal project that was built using Spring Boot Framework comprising of Java, JSP, HTML, CSS and MySQL
-	Database. This project is the biggest accomplishment in my self-learning progress so far. Sneakers Voting would provide information to the sneaker industry about what customers are interested in and what the 
-	current trends are. It was really exciting because I could combine both my interests in school and outside of school together to make a product other people can use.
+	<p>I'm a Computer Engineering student at UBC. I've always been interested in creating a web application, so this is a self-project 
+	to do just that. I'm also a big fan of sneakers and saw this trend on Nike SNKRS Launch where people voted on sneakers, so this is
+	where this project idea stems from. Sneakers Voting would provide information to the sneaker industry about what the customers are
+	interested in and what the current trends are. It was really exicting because I could combine both my interests in school and outside
+	of school together to make a product other people can use.
 	  </p>
-	<p>Sneakers voting page generates and displays 2 random pairs of sneakers from MySQL database. Users only need to click the image of the sneakers they are interested in. Top 10 sneakers are shown after 
-	multiple rounds of voting or via the "Ranking" link.
+	  
+	<h2>The Web and what it does</h2>
+	<p>The web app displays 10 different pairs of shoes, 2 pairs for one round, allowing users to pick one over the other. Once the user
+	clicks one of the two sneakers, their scores are calculated using Elo Rating System. The ranking will use these scores to display the
+	top 10 sneakers.
 	</p>
 	
+	<h2>How it was built</h2>
+	<p>
+	For the frontend, I used HTML and CSS. For the backend, I used Spring Boot Framework with Java, JSP, and MySQL database. I was able
+	to learn this using documentation online and searching Stackoverflow for tips on certain problems I encountered. All this was tracked
+	in SneakersVoting repository on my github (See source code)
+	</p>
+	
+	<h2>Additional features</h2>
 	<p>Features to be added:</p>
 	<ul>
 		<li>Allow users to upload photos of their own sneakers</li>
 		<li>Improve user interface for mobile devices</li>
+		<li>Display how many times each sneaker is voted in percentage after a vote has been made</li>
 	</ul>
 	
-	<p>Thanks for visiting. If you're hiring coop students, let me know &#128518</p>
+	<p>Thanks for visiting.</p>
 	</div>
 </div>
 
