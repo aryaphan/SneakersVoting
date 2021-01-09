@@ -78,7 +78,7 @@
 	<p>
 	For the frontend, I used HTML and CSS. For the backend, I used Spring Boot Framework with Java, JSP, and MySQL database. I was able
 	to learn this using documentation online and searching Stackoverflow for tips on certain problems I encountered. All this was tracked
-	in SneakersVoting repository on my github (See source code)
+	in SneakersVoting repository on my github (See <a href="https://github.com/aryaphan/SneakersVoting"> source code</a>)
 	</p>
 	
 	<h2>Additional features</h2>

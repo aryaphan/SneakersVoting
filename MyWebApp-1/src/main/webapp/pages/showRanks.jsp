@@ -89,7 +89,7 @@
   	<div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-5 row">
   		<c:forEach begin="${index}" end="${index + 4}" step="1" var="i">
 			<c:set var="sneaker" value="${sneakerRanks.get(i)}"/>	
-				<div class="border  text-center  overflow-hidden rounded col-sm-2 ">
+				<div class="border  text-center  overflow-hidden rounded col-sm-2" id="rank">
 			    	<div class="my-3">
 			        	<h5>Rank <c:out value="${rank}"/></h5>
 			        	<h5>${sneaker.name}</h5>

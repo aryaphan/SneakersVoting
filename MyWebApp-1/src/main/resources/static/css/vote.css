@@ -104,11 +104,14 @@ h4 {
 .rounded {
     border-radius: 2rem!important;
     padding-bottom: 30px;
-    margin-top: 1%;
+    margin-top: 0.5%;
     margin-right: 2%;
     
 }
 
+#rank {
+	margin-top: 1%;
+}
 
 .vote {
    margin-left: 8%;
