@@ -68,7 +68,7 @@
 	of school together to make a product other people can use.
 	  </p>
 	  
-	<h2>The Web and what it does</h2>
+	<h2>Sneakers Voting and what it does</h2>
 	<p>The web app displays 10 different pairs of shoes, 2 pairs for one round, allowing users to pick one over the other. Once the user
 	clicks one of the two sneakers, their scores are calculated using Elo Rating System. The ranking will use these scores to display the
 	top 10 sneakers.
