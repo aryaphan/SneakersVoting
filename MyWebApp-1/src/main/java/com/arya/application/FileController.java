@@ -48,25 +48,18 @@ public class FileController {
 		
 		String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath()
 				.path("/downloadFile/")
-				.path(filename.getName())
+				.path(filename.getId())
 				.toUriString();
+		System.out.println(fileDownloadUri);
 		return new ResponseFile(filename.getName(), fileDownloadUri, file.getContentType(), file.getSize());
-		//String message = "";
 		
-		/*
-		 * try { storageService.store(file); message = "Uploaded files successfully: " +
-		 * file.getOriginalFilename(); return
-		 * ResponseEntity.status(HttpStatus.OK).body(new ResponseMessage(message)); }
-		 * catch (IOException e) { message = "Could not upload the file: " +
-		 * file.getOriginalFilename(); return
-		 * ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(new
-		 * ResponseMessage(message)); }
-		 */
+		
 	}
 	
 	@PostMapping("/uploadMultipleFiles")
 	public List<ResponseFile> uploadMultipleFiles(@RequestParam("files") MultipartFile[] files){
 		System.out.println("upload multiple");
+		System.out.println(files.length);
 		return Arrays.asList(files).stream().map(file -> uploadFile(file)).collect(Collectors.toList());
 	}
 	
@@ -84,9 +77,9 @@ public class FileController {
 		return ResponseEntity.status(HttpStatus.OK).body(files);
 	}
 	
-	@GetMapping("/downloadFile/{fileName:.+}")
-	public ResponseEntity<Resource> downloadFile(@PathVariable String filename, HttpServletRequest request){
-		FileDB fileDB = storageService.getFile(filename);
+	@GetMapping("/downloadFile/{fileId}")
+	public ResponseEntity<Resource> downloadFile(@PathVariable String fileId){
+		FileDB fileDB = storageService.getFile(fileId);
 		
 		return ResponseEntity.ok()
 				.contentType(MediaType.parseMediaType(fileDB.getType()))
