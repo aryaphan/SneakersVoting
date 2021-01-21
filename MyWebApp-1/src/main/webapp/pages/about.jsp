@@ -46,6 +46,12 @@
     					<a class="nav-link" href="showRanks">Ranking</a>
     				</form>
     			</li>
+    			
+    			<li class="nav-item">
+    				<form action="/upload" method="GET">
+    					<a class="nav-link" href="upload">Upload</a>
+    				</form>
+    			</li>
     
      			 <li class="nav-item">
         			<form action="/about" method="GET">
@@ -64,7 +70,7 @@
 	<p>I'm a Computer Engineering student at UBC. I've always been interested in creating a web application, so this is a self-project 
 	to do just that. I'm also a big fan of sneakers and saw this trend on Nike SNKRS Launch where people voted on sneakers, so this is
 	where this project idea stems from. Sneakers Voting would provide information to the sneaker industry about what the customers are
-	interested in and what the current trends are. It was really exicting because I could combine both my interests in school and outside
+	interested in and what the current trends are. It was really exciting because I could combine both my interests in school and outside
 	of school together to make a product other people can use.
 	  </p>
 	  

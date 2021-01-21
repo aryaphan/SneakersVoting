@@ -52,6 +52,12 @@
     					<a class="nav-link" href="showRanks">Ranking</a>
     				</form>
     			</li>
+    			
+    			<li class="nav-item">
+    				<form action="/upload" method="GET">
+    					<a class="nav-link" href="upload">Upload</a>
+    				</form>
+    			</li>
     
      			 <li class="nav-item">
         			<form action="/about" method="GET">
