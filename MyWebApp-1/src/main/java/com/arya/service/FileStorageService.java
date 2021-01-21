@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.arya.exception.FileNotFoundException;
+import com.arya.exception.FileStorageException;
 import com.arya.model.FileDB;
 import com.arya.repository.FileDBRepository;
 
@@ -21,17 +23,27 @@ public class FileStorageService {
 	/*
 	 * Receives MultipartFile object, transform to FileDB object and save to database
 	 * */
-	public FileDB store(MultipartFile file) throws IOException {
+	public FileDB store(MultipartFile file) {
+		System.out.println("store");
 		String filename = StringUtils.cleanPath(file.getOriginalFilename());
-		FileDB fileDB = new FileDB(filename, file.getContentType(), file.getBytes());
-		return fileDBRepository.save(fileDB);
+		try {
+			if(filename.contains("..")) {
+				throw new FileStorageException("Sorry, filename contains invalid path sequence " + filename);
+			}
+			FileDB fileDB = new FileDB(filename, file.getContentType(), file.getBytes());
+			return fileDBRepository.save(fileDB);
+		} catch (IOException ex) {
+			throw new FileStorageException("Could not store file " + filename);
+		}
+	
 	}
 	
 	/*
 	 * returns a FileDB by a given id
 	 * */
 	public FileDB getFile(String id) {
-		return fileDBRepository.findById(id).get();
+		System.out.println("getFile");
+		return fileDBRepository.findById(id).orElseThrow(() -> new FileNotFoundException("File not found with id " + id));
 	}
 	
 	/*
