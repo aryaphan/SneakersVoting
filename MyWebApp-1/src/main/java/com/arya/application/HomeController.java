@@ -22,7 +22,9 @@ import org.springframework.web.servlet.ModelAndView;
 import com.arya.dao.SneakerDAO;
 import com.arya.model.Sneaker;
 
+
 import java.util.List;
+
 
 /*
  * Handles requests and returns appropriate JSP pages
@@ -33,6 +35,8 @@ public class HomeController {
 	
 	@Autowired
 	private SneakerDAO dao;
+	
+	
 	
 	/*
 	 * Returns showRanks.jsp page
@@ -50,6 +54,15 @@ public class HomeController {
 	public String aboutPage() {
 		System.out.println("calling about page");
 		return "about";
+	}
+	
+	/*
+	 * Returns upload.jsp page
+	 * */
+	@RequestMapping(value="/upload", method = RequestMethod.GET)
+	public String uploadPage() {
+		System.out.println("calling upload page");
+		return "upload";
 	}
 	
 	/*
@@ -77,5 +90,6 @@ public class HomeController {
 		InputStream inputStream = new ByteArrayInputStream(bytes);
 		IOUtils.copy(inputStream, response.getOutputStream());
 	}
+	
 }
 
