@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
  	<link href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/vote.css">
+	<link rel="stylesheet" type="text/css" href="css/upload.css">
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
 	<!-- <link rel="stylesheet" href="https://fontawesome.com/v4.7.0/assets/font-awesome/css/font-awesome.css">  -->
@@ -63,21 +64,38 @@
 	</nav>
 </header> 
 
-<div>
-	<h1>Hiiii upload</h1>
-</div>
+<div class=" border about px-3 px-md-5 text-center  overflow-hidden rounded col-sm-6" id="upload">
+            <div class="upload-header">
+                <h2>Upload Your Images</h2>
+            </div>
+            <div class="upload-content">
+                <div class="single-upload">
+                    <h2>Upload Single File</h2>
+                    <form id="singleUploadForm" name="singleUploadForm">
+                        <input id="singleFileUploadInput" type="file" name="file" class="file-input" required />
+                        <button type="submit" class="primary submit-btn">Submit</button>
+                    </form>
+                    <div class="upload-response">
+                        <div id="singleFileUploadError"></div>
+                        <div id="singleFileUploadSuccess"></div>
+                    </div>
+                </div>
+                <div class="multiple-upload">
+                    <h2>Upload Multiple Files</h2>
+                    <form id="multipleUploadForm" name="multipleUploadForm">
+                        <input id="multipleFileUploadInput" type="file" name="files" class="file-input" multiple required />
+                        <button type="submit" class="primary submit-btn">Submit</button>
+                    </form>
+                    <div class="upload-response">
+                        <div id="multipleFileUploadError"></div>
+                        <div id="multipleFileUploadSuccess"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
-<footer class="container py-2">
-  <div class="row">
-  	<div class="col-sm-12  text-center ">
-  		<a href="https://github.com/aryaphan" class="fa fa-github fa-6" style="font-size: 48px; color:black" ></a>
-  		<!-- extra space  -->
-  		&nbsp; &nbsp; &nbsp;	
-  		<a href="https://www.linkedin.com/in/aryaphan" class="fa fa-linkedin fa-6" style="font-size: 48px;" ></a>
-  	</div>
-  </div>
-</footer> 
+		<script src="/js/upload.js"></script>
 	
 </body>
 </html>

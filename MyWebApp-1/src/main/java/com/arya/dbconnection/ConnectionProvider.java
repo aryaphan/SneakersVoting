@@ -12,7 +12,7 @@ import java.sql.SQLException;
 import java.util.Base64;
 import java.util.concurrent.ThreadLocalRandom;
 
-import org.omg.CORBA.portable.InputStream;
+/*import org.omg.CORBA.portable.InputStream;*/
 
 import com.arya.model.Sneaker;
 
@@ -27,7 +27,7 @@ public class ConnectionProvider {
 				String driver = "com.mysql.cj.jdbc.Driver";
 				String databaseURL = "jdbc:mysql://localhost:3306/images";
 				String user = "root";
-				String password = "////";
+				String password = "/";
 				
 				Class.forName(driver);
 				con = DriverManager.getConnection(databaseURL, user, password);	
