@@ -25,9 +25,13 @@ public class ConnectionProvider {
 		else {
 			try {
 				String driver = "com.mysql.cj.jdbc.Driver";
-				String databaseURL = "jdbc:mysql://localhost:3306/images";
-				String user = "root";
-				String password = "/";
+
+				String dbName = System.getProperty("RDS_DB_NAME");
+				String user = System.getProperty("RDS_USERNAME");
+				String password = System.getProperty("RDS_PASSWORD");
+				String hostname = System.getProperty("RDS_HOSTNAME");
+				String port = System.getProperty("RDS_PORT");
+				String databaseURL = "jdbc:mysql://" + hostname + ":" + port + "/" + dbName;
 				
 				Class.forName(driver);
 				con = DriverManager.getConnection(databaseURL, user, password);	

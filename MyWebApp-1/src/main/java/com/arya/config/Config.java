@@ -55,25 +55,29 @@ public class Config implements WebMvcConfigurer {
     public ViewResolver viewResolver() {
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
         viewResolver.setViewClass(JstlView.class);
-        viewResolver.setPrefix("/pages/");
+//        viewResolver.setPrefix("/pages/");
+        viewResolver.setPrefix("/WEB-INF/jsp/");
         viewResolver.setSuffix(".jsp");
         return viewResolver;
     }
 
-    @Bean
-    public DriverManagerDataSource getDataSource() {
-    	DriverManagerDataSource ds = new DriverManagerDataSource();
-    	ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
-    	ds.setUrl("jdbc:mysql://localhost:3306/ebdb");
-    	ds.setUsername("root");
-    	ds.setPassword("/");
-    	
-    	return ds;
-    	
-    }
+//    @Bean
+//    public DriverManagerDataSource getDataSource() {
+//    	DriverManagerDataSource ds = new DriverManagerDataSource();
+//    	ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
+//    	ds.setUrl("jdbc:mysql://localhost:3306/ebdb");
+//    	ds.setUsername("root");
+//    	ds.setPassword("/");
+//
+//    	return ds;
+//
+//    }
     
     @Bean
+//    public SneakerDAO getSneakerDao() {
+//    	return new SneakerDAO(getDataSource());
+//    }
     public SneakerDAO getSneakerDao() {
-    	return new SneakerDAO(getDataSource());
+        return new SneakerDAO();
     }
 }

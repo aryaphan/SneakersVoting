@@ -77,14 +77,16 @@ public class ContinueVoting extends HttpServlet {
 		
 		//if counter < 10, continue voting
 		if (counter < 10) {
-			getServletConfig().getServletContext().getRequestDispatcher("/pages/nextRound.jsp").forward(request, response);
+//			getServletConfig().getServletContext().getRequestDispatcher("/pages/nextRound.jsp").forward(request, response);
+			getServletConfig().getServletContext().getRequestDispatcher("/WEB-INF/jsp/nextRound.jsp").forward(request, response);
 		}
 		
 		//otherwise, show rankings
 		else {
 			//reset counter
 			counter = 0;
-			getServletConfig().getServletContext().getRequestDispatcher("/pages/showRanks.jsp").forward(request, response);
+//			getServletConfig().getServletContext().getRequestDispatcher("/pages/showRanks.jsp").forward(request, response);
+			getServletConfig().getServletContext().getRequestDispatcher("/WEB-INF/jsp/showRanks.jsp").forward(request, response);
 		}
 		
 		
