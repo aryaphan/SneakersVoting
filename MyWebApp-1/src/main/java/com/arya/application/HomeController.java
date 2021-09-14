@@ -55,12 +55,12 @@ public class HomeController {
 	/*
 	 * Sends the list of all sneakers in the database to vote.jsp page to handle and returns vote.jsp page
 	 * */
-	@RequestMapping(value="/vote", method = RequestMethod.GET)
-	public ModelAndView listSneaker(ModelAndView model) throws IOException {
+	@RequestMapping(value="/", method = RequestMethod.GET)
+	public ModelAndView listSneaker() throws IOException {
 		System.out.println("calling voting page");
+		ModelAndView model = new ModelAndView("vote");
 		List<Sneaker> sneakerList = dao.getAllSneakers();
 		model.addObject("sneakerList", sneakerList);
-		model.setViewName("vote");
 		return model;
 	}
 	
