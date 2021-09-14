@@ -87,6 +87,7 @@
   <c:set var="endIndex" scope="page" value="9"/>
 
   <c:forEach begin="${startIndex}" end="${endIndex}" step="5" var="index">
+  <div class="ranking-container">
   	<div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-5 row">
   		<c:forEach begin="${index}" end="${index + 4}" step="1" var="i">
 			<c:set var="sneaker" value="${sneakerRanks.get(i)}"/>
@@ -100,6 +101,7 @@
 			    </div>
 		</c:forEach>
 	</div>
+    </div>
   </c:forEach>
 
 </main>
