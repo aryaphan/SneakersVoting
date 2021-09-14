@@ -25,14 +25,13 @@ public class ConnectionProvider {
 		else {
 			try {
 				String driver = "com.mysql.cj.jdbc.Driver";
-
 				String dbName = System.getProperty("RDS_DB_NAME");
 				String user = System.getProperty("RDS_USERNAME");
 				String password = System.getProperty("RDS_PASSWORD");
 				String hostname = System.getProperty("RDS_HOSTNAME");
 				String port = System.getProperty("RDS_PORT");
 				String databaseURL = "jdbc:mysql://" + hostname + ":" + port + "/" + dbName;
-				
+
 				Class.forName(driver);
 				con = DriverManager.getConnection(databaseURL, user, password);	
 				System.out.println("connected");

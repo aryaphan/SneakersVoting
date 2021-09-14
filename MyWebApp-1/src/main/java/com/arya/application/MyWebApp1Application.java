@@ -17,12 +17,21 @@ import com.arya.dao.SneakerDAO;
 //@ComponentScan(basePackages = {"com.arya.service", "com.arya.dao", "com.arya.repository"})
 @EnableJpaRepositories("com.arya.repository")
 @EntityScan("com.arya.model")
-public class MyWebApp1Application {
+//public class MyWebApp1Application {
+//
+//	public static void main(String[] args) {
+//		SpringApplication.run(MyWebApp1Application.class, args);
+//		System.out.println("running app");
+//	}
+//
+public class MyWebApp1Application extends SpringBootServletInitializer {
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		return application.sources(MyWebApp1Application.class);
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(MyWebApp1Application.class, args);
-		System.out.println("running app");
 	}
-	
 
 }

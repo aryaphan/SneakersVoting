@@ -66,7 +66,7 @@ public class Config implements WebMvcConfigurer {
 //    	DriverManagerDataSource ds = new DriverManagerDataSource();
 //    	ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
 //    	ds.setUrl("jdbc:mysql://localhost:3306/ebdb");
-//    	ds.setUsername("root");
+//    	ds.setUsername("/");
 //    	ds.setPassword("/");
 //
 //    	return ds;

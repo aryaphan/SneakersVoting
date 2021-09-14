@@ -36,8 +36,8 @@
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<form action="/vote" method="GET">
-						<a class=" nav-link" href="vote">Vote</a>
+					<form action="/" method="GET">
+						<a class=" nav-link" href="/">Vote</a>
 					</form>
 				</li>
 
