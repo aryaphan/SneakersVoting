@@ -12,25 +12,28 @@ import java.sql.SQLException;
 import java.util.Base64;
 import java.util.concurrent.ThreadLocalRandom;
 
-import org.omg.CORBA.portable.InputStream;
+/*import org.omg.CORBA.portable.InputStream;*/
 
 import com.arya.model.Sneaker;
 
 public class ConnectionProvider {
 	private static Connection con = null;
-	
+
 	public static Connection getConnection() {
 		if(con != null)
 			return con;
 		else {
 			try {
 				String driver = "com.mysql.cj.jdbc.Driver";
-				String databaseURL = "jdbc:mysql://localhost:3306/images";
-				String user = "root";
-				String password = "////";
-				
+				String dbName = System.getenv("RDS_DB_NAME");
+				String user = System.getenv("RDS_USERNAME");
+				String password = System.getenv("RDS_PASSWORD");
+				String hostname = System.getenv("RDS_HOSTNAME");
+				String port = System.getenv("RDS_PORT");
+				String databaseURL = "jdbc:mysql://" + hostname + ":" + port + "/" + dbName;
+
 				Class.forName(driver);
-				con = DriverManager.getConnection(databaseURL, user, password);	
+				con = DriverManager.getConnection(databaseURL, user, password);
 				System.out.println("connected");
 			} catch (ClassNotFoundException cnfe) {
 				System.out.println(cnfe);
@@ -41,5 +44,3 @@ public class ConnectionProvider {
 		}
 	}
 }
-
-

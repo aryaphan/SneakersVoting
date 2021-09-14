@@ -36,44 +36,28 @@ public class Config implements WebMvcConfigurer {
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/").setViewName("forward:/index.html");
     }
-//    @Override
-//    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-//        registry.addResourceHandler("/resources/**")
-//          .addResourceLocations("/resources/").setCachePeriod(3600)
-//          .resourceChain(true).addResolver(new PathResourceResolver());
-//    }
-    @Bean	
+
+    @Bean
     public ServletRegistrationBean<HttpServlet> votingServlet() {
- 	   ServletRegistrationBean<HttpServlet> servRegBean = new ServletRegistrationBean<>();
- 	   servRegBean.setServlet(new ContinueVoting());
- 	   servRegBean.addUrlMappings("/ContinueVoting");
- 	   servRegBean.setLoadOnStartup(1);
- 	   return servRegBean;
+        ServletRegistrationBean<HttpServlet> servRegBean = new ServletRegistrationBean<>();
+        servRegBean.setServlet(new ContinueVoting());
+        servRegBean.addUrlMappings("/ContinueVoting");
+        servRegBean.setLoadOnStartup(1);
+        return servRegBean;
     }
 
     @Bean
     public ViewResolver viewResolver() {
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
         viewResolver.setViewClass(JstlView.class);
-        viewResolver.setPrefix("/pages/");
+        viewResolver.setPrefix("/WEB-INF/jsp/");
         viewResolver.setSuffix(".jsp");
         return viewResolver;
     }
 
-    @Bean
-    public DriverManagerDataSource getDataSource() {
-    	DriverManagerDataSource ds = new DriverManagerDataSource();
-    	ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
-    	ds.setUrl("jdbc:mysql://localhost:3306/images");
-    	ds.setUsername("root");
-    	ds.setPassword("//");
-    	
-    	return ds;
-    	
-    }
-    
+
     @Bean
     public SneakerDAO getSneakerDao() {
-    	return new SneakerDAO(getDataSource());
+        return new SneakerDAO();
     }
 }
